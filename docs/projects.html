@@ -27,13 +27,13 @@
     main > h1{
         margin: 0;
         margin-bottom: 2rem;
-        margin-top: 1rem;
+        margin-top: 1.5em;
         font-family: 'Staatliches', cursive;
     }
 
     .screenshot{
-        margin-top: 2.4em;
-        margin-bottom: 2.4em;
+        margin-top: 1em;
+        margin-bottom: 1em;
     	margin-left: 1em;
         margin-right: 1em;
     }
@@ -41,11 +41,19 @@
     .screenshot > img{
     	height: auto;;
     	width: 100%;
-        object-fit: scale-down;
+        border-radius: 10px;
+        box-shadow: 4px 4px 13px -6px black;
     }
 
     .screenshot > img:hover{
 
+    }
+
+    .first-desc{
+        margin-bottom: 3em;
+    }
+    .second-desc{
+        margin-top: 3em;
     }
 
     .divider{
@@ -72,6 +80,35 @@
 
     .game-icon svg:hover{
         opacity: 80%;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .hover-link {
+        display: inline-block;
+        position: relative;
+    }
+
+    .hover-link:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: black;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+        cursor:pointer;
+    }
+
+    .hover-link:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
 </style>
 
@@ -205,20 +242,41 @@
 
   <main>
     <h1>My Projects</h1>
+
     <div class="project">
         <div class="first-desc">
-            <h3 class="title">Project 1</h3>
+            <h3 class="title">Hangman</h3>
             <p>
-                The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.
+                The classic Hangman game made completely in C.
             </p>
         </div>
         <div class="screenshot">
-            <img src="images\spock.jpg" alt="Spock">
+            <img src="images\project-images\hangman-logo.png" alt="hangman-logo">
         </div>
-        <div class="second-desc">
+        <div class="screenshot">
+            <img src="images\project-images\hangman-example.png" alt="hangman-example">
+        </div>
+        <!--<div class="second-desc">
             <p>
-                The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim leo et purus sollicitudin pharetra. Nulla at lacus vel sapien lobortis aliquet sed nec mauris. Aliquam faucibus sed ipsum non fermentum. Nunc sollicitudin velit vel dolor luctus, sit amet sollicitudin leo bibendum. Proin metus erat, ultrices quis dictum vel, sagittis sed sem. Aliquam nibh eros, dapibus ac massa ut, lobortis condimentum nisi. Maecenas cursus urna neque. Suspendisse libero elit, vehicula aliquet magna vel, fermentum mattis ante. Nullam eu est venenatis, consequat felis et, dictum odio. Donec aliquam accumsan mi. Nullam nec pellentesque neque, nec mollis nibh.
             </p>
+        </div>-->
+    </div>
+
+    <hr class="divider"></hr>
+
+    <div class="project">
+        <div class="first-desc">
+            <h3 class="title">Pizza Comparator</h3>
+            <p>
+                A program made after a hangover and that says it all. You input data and it calculates the best pizza deal (I hope). It's made using C.
+            </p>
+        </div>
+        <div class="screenshot">
+            <img src="images\project-images\pizza-logo.png" alt="pizza-logo">
+        </div>
+        <div class="screenshot">
+            <img src="images\project-images\pizza-example.png" alt="pizza-example">
         </div>
     </div>
 
@@ -226,18 +284,13 @@
 
     <div class="project">
         <div class="first-desc">
-            <h3 class="title">Project 2</h3>
+            <h3 class="title">Resistors Color Coding Game</h3>
             <p>
-                The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.
+                A game, made in Java, based on the color coding system of resistors. It also helps in practice which is the main reason it was made. A GUI is scheduled to be made soon!
             </p>
         </div>
         <div class="screenshot">
-            <img src="images\spock.jpg" alt="Spock">
-        </div>
-        <div class="second-desc">
-            <p>
-                The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.
-            </p>
+            <img src="images\project-images\resistors.png" alt="resistors">
         </div>
     </div>
 
@@ -245,21 +298,73 @@
 
     <div class="project">
         <div class="first-desc">
-            <h3 class="title">Project 3</h3>
+            <h3 class="title">Library Mangment</h3>
             <p>
-                The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.
+                A Library Managment program, made in Java. It works with and without GUI and has many features and functionality. Also this was my first attempt at making a GUI using Java Swing.
             </p>
         </div>
         <div class="screenshot">
-            <img src="images\spock.jpg" alt="Spock">
+            <img src="images\project-images\library-terminal-intro.png" alt="library-terminal">
+        </div>
+        <div class="screenshot">
+            <img src="images\project-images\library-terminal-example.png" alt="library-terminal">
+        </div>
+        <div class="screenshot">
+            <img src="images\project-images\library-gui-submit.png" alt="library-terminal">
+        </div>
+        <div class="screenshot">
+            <img src="images\project-images\library-gui-library.png" alt="library-terminal">
         </div>
         <div class="second-desc">
-            <p>
-                The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.
-            </p>
+            <h4>
+                Functionality:
+            </h4>
+            <ul>
+                <li>Adding and Deleting books</li>
+                <li>Sorting existing books</li>
+                <li>Searching for a specific book</li>
+                <li>Includes a Settings panel</li>
+            </ul>
         </div>
     </div>
 
+    <hr class="divider"></hr>
+
+    <div class="project">
+        <div class="first-desc">
+            <h3 class="title">#ΣχέδιοΑθηνάOUT Website</h3>
+            <p>
+                This static website was made within 2-3 hours with HTML5 and CSS3 only. It's purpose was to inform about the tense situation in my university.
+                The domain and hosting of this website is been handled by a fellow student. Here is his <a href="https://github.com/MichaelDim02/athinaout" class="hover-link" target="_blank"><span style="font-weight: bold">Github Repository</span></a>
+            </p>
+        </div>
+        <div class="screenshot">
+            <img src="images\project-images\athinaout.png" alt="athinaout">
+        </div>
+        <span>Link:</span>
+        <a href="https://athinaout.xyz" class="hover-link" target="_blank" style="margin-top: 2rem">#ΣχέδιοΑθηνάOUT</a>
+    </div>
+
+    <hr class="divider"></hr>
+
+    <div class="project">
+        <div class="first-desc">
+            <h3 class="title">My Portfolio</h3>
+            <p>
+                The Website itself is a project that was in the making for a long time. It, of course, showcases my projects.
+            </p>
+        </div>
+        <div class="screenshot">
+            <img src="images\project-images\website-demo.png" alt="website">
+        </div>
+    </div>
+
+
+    <hr class="divider"></hr>
+
+    <p style="font-weight: bold">
+        The source code for the above projects and many more, can be found at my Github page.
+    </p>
     <footer>
         <a href="game.html" class="game-icon">
           <svg

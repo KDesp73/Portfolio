@@ -34,3 +34,8 @@ while(themeDARK){
     var element = document.body;
     element.classList.toggle("dark-mode");
 }
+
+
+function notFound(){
+    alert("Error 404. Resume not found (yet)");
+}

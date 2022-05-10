@@ -14,6 +14,8 @@
 </head>
 
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
     body{
         overflow-x: hidden;
         overflow-y: scroll;
@@ -37,12 +39,18 @@
         align-items: center;
     }
 
+    header > h1{
+        margin-top: 1.5em;
+        font-family: 'Staatliches', cursive;
+    }
+
     .hovertext {
         margin-bottom: 10%;
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
+
     }
 
     .hovertext:hover{
@@ -64,6 +72,8 @@
         position: absolute;
         z-index: 1;
         top: 100%;
+
+        font-family: 'Open Sans';
     }
 
     .hovertext:hover:before {
@@ -140,7 +150,7 @@
   <nav class="navbar">
     <ul class="navbar-nav">
       <li class="logo">
-        <a href="#" class="nav-link">
+        <a class="nav-link">
           <span class="link-text logo-text">KDesp</span>
           <svg
             aria-hidden="true"
@@ -274,26 +284,25 @@
             </p>
         </header>
         <section class="paragraph">
-            <h3>Paragraph 1</h3>
+            <h3>Currently...</h3>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas omnis accusamus unde deserunt. Sapiente laboriosam sequi cupiditate sint debitis veritatis exercitationem dignissimos est enim molestias accusamus, suscipit nostrum asperiores minus!
-            Eligendi ab fugiat dignissimos ipsam minima necessitatibus provident repellendus neque odit numquam aliquam expedita suscipit doloribus nesciunt facilis, molestiae quibusdam! Odit excepturi ab iure, aspernatur nemo aut repudiandae? Doloribus, earum?
+                I really love programming. It's got to the point where it has become an addiction, in a good sense... <a href="https://www.iee.ihu.gr/en/" class="hover-link" target="_blank"><span style="font-weight: bold">My school</span></a> provides enough information to keep me going and make me thirsty for more knowledge in the subject.
             </p>
+
         </section>
         <section class="paragraph">
-            <h3>Paragraph 2</h3>
+            <h3>Hobbies</h3>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas omnis accusamus unde deserunt. Sapiente laboriosam sequi cupiditate sint debitis veritatis exercitationem dignissimos est enim molestias accusamus, suscipit nostrum asperiores minus!
-            Eligendi ab fugiat dignissimos ipsam minima necessitatibus provident repellendus neque odit numquam aliquam expedita suscipit doloribus nesciunt facilis, molestiae quibusdam! Odit excepturi ab iure, aspernatur nemo aut repudiandae? Doloribus, earum?
+                I studied the guitar for 10 years and I've been playing for 12 years now. I'm a bit of a nerd when it comes to comics and comic book movies. Let's say I like them a little too much...
             </p>
         </section>
         <section class="links">
             <ul>
                 <li>
-                    <a href="" class="hover-link">Resume</a>
+                    <a href="" class="hover-link" onclick="notFound()">Resume</a>
                 </li>
                 <li>
-                    <a href="" class="hover-link">Resume</a>
+                    <a href="https://forms.gle/UCULsfBeMYp12xv3A" class="hover-link" target="_blank">Feedback!</a>
                 </li>
             </ul>
         </section>
