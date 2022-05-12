@@ -189,8 +189,18 @@ footer{
         margin: 0;
     }
 
-    .project{
+    .project, .small-box{
         margin: 0;
+    }
+
+    .small-box{
+        margin: 2rem;
+        margin-top: 4rem;
+        margin-bottom: 0;
+        width: auto;
+        padding: 4rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     .dark-mode{
