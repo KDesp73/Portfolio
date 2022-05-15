@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js" async></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li class="game"><h2>Memory<br>Game</h2></li>
+            <li class="start" onclick="__init__(1)">Start</li>
+            <li class="restart" onclick="location.reload()">Restart</li>
+            <li class="score-container">Score:<div id="score">0</div></li>
+        </ul>
+    </div>
+    <main>
+        <div id="timer"></div>
+        <div class="board-container">
+            <button class="pad1" id="pad1" onclick="pad1Clicked()"></button>
+            <button class="pad2" id="pad2" onclick="pad2Clicked()"></button>
+            <button class="pad3" id="pad3" onclick="pad3Clicked()"></button>
+            <button class="pad4" id="pad4" onclick="pad4Clicked()"></button>
+            <button class="pad5" id="pad5" onclick="pad5Clicked()"></button>
+            <button class="pad6" id="pad6" onclick="pad6Clicked()"></button>
+            <button class="pad7" id="pad7" onclick="pad7Clicked()"></button>
+            <button class="pad8" id="pad8" onclick="pad8Clicked()"></button>
+            <button class="pad9" id="pad9" onclick="pad9Clicked()"></button>
+        </div>
+
+        <button id="next" onclick="nextLevel()">Next</button>
+    </main>
+
+
+    <button class="cta">
+        <a href="..\projects.html">Return</a> <i class="ri-arrow-right-line"></i>
+    </button>
+</body>
+</html>
