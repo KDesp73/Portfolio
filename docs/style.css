@@ -15,18 +15,23 @@ body {
     background-color: white;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
     width: 0.4rem;
+    z-index: 0;
 }
 
 body::-webkit-scrollbar-track {
     background: #1e1e24;
+    z-index: 0;
 }
 
 body::-webkit-scrollbar-thumb {
     background: #6649b8;
+    z-index: 0;
 }
 
 main {
@@ -37,7 +42,7 @@ main {
 }
 
 .navbar {
-    z-index: 2;
+    z-index: 5;
     position: fixed;
     background-color: var(--bg-primary);
     transition: width 600ms ease;
