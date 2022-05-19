@@ -178,11 +178,8 @@ footer{
     }
 
     .box{
-        color: white;
-        border-radius: 0;
         width: 100vw;
         height: 100vh;
-        background-color: #28282B;
     }
 
     main {
@@ -204,7 +201,7 @@ footer{
     }
 
     .dark-mode{
-        background-color: var(--bg-secondary);
+        background-color: var(--bg-primary);
         color: white;
     }
 }

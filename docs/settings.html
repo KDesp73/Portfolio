@@ -14,6 +14,8 @@
     />
 </head>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
     main{
         margin: 0;
         padding: 0;
@@ -22,10 +24,16 @@
         justify-content: center;
         align-items: center;
         color: black;
+        flex-direction: column;
     }
 
     h2{
         color: inherit;
+        margin: 0;
+        margin-bottom: 2rem;
+        margin-top: 1.5em;
+        font-family: 'Staatliches', cursive;
+        text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
     }
 
     .settings-container{
@@ -38,17 +46,14 @@
         "box1 box box2";
     }
 
-    .settings-container > h2{
-        color: black;
-    }
-
     .box{
         text-align: auto;
         padding-top: 1rem;
         border-radius: 5%;
         width: 25rem;
         height: 20rem;
-        background-color: #28282B;
+        color: black;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.6);
     }
 
     .switch {
@@ -116,15 +121,15 @@
     }
 
     input:checked + .lang {
-        background-color: #0096FF;
+        background-color: #0F52BA;
     }
 
     .theme{
-        background-color: #ffff62;
+        background-color: #ffd500;
     }
 
     input:checked + .theme {
-        background-color: black;
+        background-color: var(--bg-secondary);
     }
 
     .switches-grid-container {  display: grid;
@@ -186,8 +191,8 @@
     }
 
     .source-code > a{
-        color: white;
-        text-decoration:none;
+        text-decoration: none;
+        color: black;
     }
 
     .source-code > a:hover{
@@ -195,7 +200,7 @@
     }
 
     .settings-container{
-        display: none;
+
     }
 
     footer{
@@ -218,6 +223,7 @@
         color: black;
         width: 75%;
         height: auto;
+        display: none;
     }
 
     .loader {
@@ -388,18 +394,20 @@
     </ul>
   </nav>
 
-  <main>
+  <main id="main">
+    <h2>Settings</h2>
+
     <div class="coming-soon">
-        <div class="loader">
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-        </div>
-        <span>Coming Soon...</span>
+      <div class="loader">
+          <div class="ball"></div>
+          <div class="ball"></div>
+          <div class="ball"></div>
+      </div>
+      <span>Coming Soon...</span>
     </div>
-    <div class="settings-container">
-        <h2>Settings</h2>
-        <div class="box">
+
+    <div class="settings-container" id="settings-container">
+        <div class="box" id="box">
 
             <div class="switches-grid-container">
                 <div class="switch1" >
@@ -410,7 +418,7 @@
                 </div>
                 <div class="switch2">
                     <label class="switch">
-                        <input type="checkbox" id="themeSwitch" onchange="themeFunc()">
+                        <input type="checkbox" id="themeSwitch" onchange="darkMode()">
                         <span class="slider round theme"></span>
                     </label>
                 </div>
