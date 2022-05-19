@@ -99,7 +99,6 @@ function togglePads(i, padDelay, length){
         return;
     }
 
-
     switch (seq[i]) {
         case 1:
             pad1.setAttribute('style', 'background-color: #23232e');
@@ -256,25 +255,28 @@ function nextLevel(){
             break;
         case 4:
             format();
-            level(6, 1350, 10);
+            level(6, 1350, 12);
             break;
         case 5:
             format();
-            level(7, 1300, 10);
+            level(7, 1300, 14);
             break;
         case 6:
             format();
-            level(8, 1250, 10);
+            level(8, 1250, 16);
             break;
         case 7:
             format();
-            level(9, 1200, 10);
+            level(9, 1200, 16);
             break;
         case 8:
             format();
-            level(10, 1150, 10);
+            level(10, 1150, 20);
             break;
         case 9:
+            format();
+            level(11, 1100, 20);
+        case 10:
             format();
             youWon();
             break;
