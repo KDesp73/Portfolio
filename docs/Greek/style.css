@@ -15,6 +15,7 @@ body {
     background-color: white;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
@@ -200,9 +201,9 @@ footer{
         padding-bottom: 2rem;
     }
 
-    .dark-mode{
-        background-color: var(--bg-primary);
-        color: white;
+    #top{
+        top: 78%;
+        left: 90%;
     }
 }
 
@@ -239,5 +240,10 @@ footer{
     .dark-mode{
         background-color: var(--bg-secondary);
         color: white;
+    }
+
+    #top{
+        top: 90%;
+        left: 95%;
     }
 }
