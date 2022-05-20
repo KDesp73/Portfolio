@@ -35,6 +35,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 main {
+    padding: 0;
+	margin: 0;
     margin-left: 5rem;
     padding: 1rem;
     text-align: center;
