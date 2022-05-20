@@ -140,13 +140,8 @@ footer{
     border-spacing: 0 0;
     padding: 10px;
     color: white;
-    margin-top: 100px;
-    height: 80px;
-}
-
-.dark-mode{
-    background-color:  var(--bg-secondary);
-    color: white;
+    height: 50px;
+    margin-top: 2em;
 }
 
 /* Small screens */
@@ -207,11 +202,14 @@ footer{
         padding-bottom: 2rem;
     }
 
-    .dark-mode{
-        background-color: var(--bg-primary);
-        color: white;
+    #top{
+        margin-top: 2em;
+        margin-right: 0;
+        margin-bottom: 4em;
     }
 }
+
+
 
 
 /* Large screens */
@@ -243,8 +241,14 @@ footer{
         margin-right: 15rem;
     }
 
-    .dark-mode{
-        background-color: var(--bg-secondary);
-        color: white;
+    #top{
+        margin-top: 4em;
+        margin-right: 2em;
     }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }

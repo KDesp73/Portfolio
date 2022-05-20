@@ -111,12 +111,13 @@
 
     #top{
     	place-self: end;
-    	position: sticky;
-    	margin-top: calc(100vh + 200px);
-    	bottom: 2.7em;
-    	right: 2em;
+    	position: flex;
+        margin: 0;
+        margin-top: 4em;
+        margin-right: 0;
 
-        min-width: 2.8em;;
+
+        width: 2.8em;
     	height: 2.8em;
     	border-radius: 50%;
 
@@ -125,7 +126,7 @@
     	display: grid;
     	place-items: center;
 
-    	text-decoration: none;
+        text-decoration: none;
     	background-color: var(--base-color);
     	transform: translateY(0%);
     	transition: ease-out 200ms;
@@ -135,26 +136,26 @@
     #top:hover{
         background-color: var(--bg-primary);
         border-radius: 10px;
-        transition: ease-in 300ms;
+        transition: ease-in-out 300ms;
     }
 
     #top::after {
-        content: "";
-    	position: absolute;
-    	left: 0;
-    	top: 50%;
-    	width: 100%;
-    	height: 200%;
-    	transform: translateY(-30%);
-    	background-color: rgba(0, 0, 0, 0);
-    	display: block;
-    }
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	height: 200%;
+	transform: translateY(-30%);
+	background-color: rgba(0, 0, 0, 0);
+	display: block;
+}
 
     #top > svg{
         width: 30px;
         height: 30px;
-        margin-left: 7px;
         padding: 7px;
+        margin-left: 4px;
     }
 
     #top > svg > path{
@@ -282,6 +283,7 @@
     </nav>
 
   <main>
+
     <h1>My Projects</h1>
 
     <div class="project">
@@ -425,11 +427,13 @@
 
     <hr class="divider"></hr>
 
-    <p style="font-weight: bold">
+
+
+    <p style="font-weight: bold" class="scp">
         The source code for the above projects and many more, can be found at my Github page.
     </p>
 
-    <!--<a id="top" href="#">
+    <a id="top" href="#" onclick="window.scrollTo({top:0; behavior: smooth;})">
         <svg
             aria-hidden="true"
             focusable="false"
@@ -441,7 +445,7 @@
                 d="M374.6 246.6C368.4 252.9 360.2 256 352 256s-16.38-3.125-22.62-9.375L224 141.3V448c0 17.69-14.33 31.1-31.1 31.1S160 465.7 160 448V141.3L54.63 246.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160C387.1 213.9 387.1 234.1 374.6 246.6z"
             />
         </svg>
-    </a>-->
+    </a>
 
     <footer>
         <!--<a href="Website Game\index.html" class="game-icon">
@@ -465,6 +469,9 @@
           </svg>
       </a>-->
     </footer>
+
+
+
   </main>
 </body>
 </html>
