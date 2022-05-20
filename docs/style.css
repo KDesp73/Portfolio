@@ -141,7 +141,7 @@ footer{
     padding: 10px;
     color: white;
     height: 50px;
-    margin-top: 2em;
+    margin-top: 5em;
 }
 
 /* Small screens */
@@ -205,7 +205,7 @@ footer{
     #top{
         margin-top: 2em;
         margin-right: 0;
-        margin-bottom: 4em;
+        margin-bottom: 1em;
     }
 }
 
