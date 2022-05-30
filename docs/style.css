@@ -1,14 +1,15 @@
 :root {
-  font-size: 16px;
-  font-family: 'Open Sans';
-  /*font-family: 'Poppins', sans-serif;*/
-  --text-primary: #b6b6b6;
-  --text-secondary: #ececec;
-  --bg-primary: #23232e;
-  --bg-secondary: #141418;
-  --transition-speed: 600ms;
-  --base-color: #C1292E;
-  --light-grey: #F5F5F5;
+    font-size: 16px;
+    font-family: 'Open Sans';
+    /*font-family: 'Poppins', sans-serif;*/
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --transition-speed: 600ms;
+    --base-color: #C1292E;
+    --light-grey: #F5F5F5;
+    cursor: url("images/cursor_bubbly.png"), auto;
 }
 
 body {
@@ -18,7 +19,7 @@ body {
     padding: 0;
     height: 100vh;
     scroll-behavior: smooth;
-    cursor: url(images\"cursor_bubbly.png"), auto;
+
 
 }
 
@@ -274,9 +275,10 @@ footer{
         margin-left: 15rem;
         margin-right: 15rem;
     }
-    .home-container{
+    .home-container header > h3{
         margin-left: 5em;
     }
+
 
     #top{
         margin-top: 4em;
