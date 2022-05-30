@@ -19,12 +19,17 @@
     body{
         overflow-x: hidden;
         overflow-y: scroll;
+        margin: 0;
+        padding-top: 0;
     }
 
     main{
         height: 100vh;
         display: flex;
         flex-direction: column;
+        margin: 0;
+
+        padding-top: 0;
     }
 
     .home-container{
@@ -37,20 +42,58 @@
     header {
         width: auto;
         align-items: center;
+        margin-left: 15rem;
+        margin-right: 15rem;
     }
 
     header > h1{
+        color: black;
         margin-top: 1.5em;
         font-family: 'Staatliches', cursive;
         text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
     }
 
+    header > p{
+        margin: 4em 3em 4em 3em;
+        animation: fadeIn 3s;
+        -webkit-animation: fadeIn 3s;
+        -moz-animation: fadeIn 3s;
+        -o-animation: fadeIn 3s;
+        -ms-animation: fadeIn 3s;
+    }
+
+    @keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+
+    @-moz-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+
+    @-webkit-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+
+    @-o-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+
+    @-ms-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+
     .hovertext {
-        margin-bottom: 10%;
+        margin-bottom: 3%;
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
+        color: black;
 
     }
 
@@ -82,6 +125,14 @@
         visibility: visible;
     }
 
+    header{
+        /*
+        background-image: url("images/waves.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        */
+        color: black;
+    }
 
     header > p{
         width: auto;
@@ -89,18 +140,34 @@
         padding: 1em;
     }
 
-    .paragraph {
-        margin-top: 10%;
-        color: white;
-        background-color: var(--base-color);
+    .section1 {
+
+        color: black;
+        background-color: inherit;
         line-height: 2;
-        padding: 5em;
-        padding-top: 2em;
-        padding-bottom: 2em;
+        padding: 2em 10em 3em 10em;
         font-size: 1.2rem;
-        width: auto;
-        border-radius: 30px;
-        box-shadow: 4px 4px 13px -6px black;
+        width: 100%;
+    }
+
+    .section1 > p{
+        color: #727272;
+        margin: 0 3em 0 3em;
+    }
+    .section2 {
+        color: black;
+
+        background-color: var(--light-grey);
+        line-height: 2;
+        padding: 2em 10em 3em 10em;
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .section2 > p{
+        color: #727272;
+        margin: 0 3em 0 3em;
+
     }
 
     .small-box{
@@ -119,12 +186,40 @@
 
     a{
         text-decoration: none;
-        color: white;
+        color: black;
+    }
+
+
+
+    .school {
+        display: inline-block;
+        position: relative;
+        color: inherit;
+    }
+
+    .school:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #989898;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+        cursor:pointer;
+    }
+
+    .school:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
 
     .hover-link {
         display: inline-block;
         position: relative;
+        color: white;
     }
 
     .hover-link:after {
@@ -145,6 +240,36 @@
         transform: scaleX(1);
         transform-origin: bottom left;
     }
+
+    .second-navbar{
+        width: 100vw;
+        height: 5rem;
+        background-color: var(--base-color);
+        position: sticky;
+        top: 0%;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        list-style: none;
+
+        box-shadow: 4px 4px 13px -6px black;
+        z-index: 1;
+
+    }
+
+    .second-navbar > a{
+        text-decoration: none;
+
+    }
+
+    .items{
+        display: flex;
+        align-items: center;
+        width: 5rem;
+    }
+
+
 </style>
 
 <script>
@@ -274,24 +399,61 @@
 
   <main>
 
+      <header>
+          <h1 class="hovertext" data-hover="General Kenobi">Hello there!</h1>
+          <p>
+              My name is Konstantinos Despoinidis and I am currently studying Information and Electronic Engineering at the International Hellenic University.
+          </p>
+      </header>
+
     <div class="home-container">
-        <header>
-            <h1 class="hovertext" data-hover="General Kenobi">Hello there!</h1>
-            <p>
-                My name is Konstantinos Despoinidis and I am currently studying Information and Electronic Engineering at the International Hellenic University.
-            </p>
-        </header>
-        <section class="paragraph">
+
+
+        <nav class="second-navbar">
+            <!--<ul>
+                <li class="items">
+                    <a href="">
+                        youtube
+                    </a>
+                </li>
+                <li class="items">
+                    <a href="">
+                        youtube
+                    </a>
+                </li>
+                <li class="items">
+                    <a href="">
+                        youtube
+                    </a>
+                </li>
+            </ul>
+-->
+        </nav>
+
+        <section class="section1">
             <h3>Currently...</h3>
             <p>
-                I really love programming. It's got to the point where it has become an addiction, in a good sense... <a href="https://www.iee.ihu.gr/en/" class="hover-link" target="_blank"><span style="font-weight: bold">My school</span></a>, provides enough information to keep me interested in the subject.
+                I really love programming. It's got to the point where it has become an addiction, in a good sense... <a href="https://www.iee.ihu.gr/en/" class="school" target="_blank"><span style="font-weight: bold">My school</span></a>, provides enough information to keep me interested in the subject.
             </p>
 
         </section>
-        <section class="paragraph">
+        <section class="section2">
             <h3>Hobbies</h3>
             <p>
                 I studied the guitar for 10 years and I've been playing for 12 years now. I'm a bit of a nerd when it comes to comics and comic book movies (and in general to be honest). Let's say I like them a little too much... I'm also into cubing.
+            </p>
+        </section>
+        <section class="section1">
+            <h3>Title</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore impedit quo eaque, ex molestias totam sit quasi quidem fuga ea, autem dolores, velit obcaecati. Optio dolores aperiam minus voluptate, eum.
+            </p>
+
+        </section>
+        <section class="section2">
+            <h3>Title</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem nam in commodi quia, explicabo at! Laboriosam, porro veniam ratione quaerat vero eius id laborum, explicabo tenetur consequatur qui, facilis repudiandae!
             </p>
         </section>
         <section class="small-box" id="small-box">
@@ -307,15 +469,63 @@
         <section class="small-box" id="small-box">
             <h3>How to contact me</h3>
             <ul>
-                <li><a class="hover-link" href="mailto:despoinidisk@gmail.com">despoinidisk@gmail.com</a></li>
+                <li><a class="hover-link" href="mailto:despoinidisk@gmail.com">Email</a></li>
                 <li><a class="hover-link" target="_blank" href="https://www.linkedin.com/in/konstantinos-despoinidis/">LinkedIn</a></li>
             </ul>
         </section>
     </div>
 
-    <footer></footer>
+    <footer>
+        <div class="pad1">
+            <a href="" class="hover-link" onclick="notFound()">Resume</a>
+            <span> | </span>
+            <a href="https://forms.gle/UCULsfBeMYp12xv3A" class="hover-link" target="_blank">Feedback</a>
+            <span> | </span>
+            <a class="hover-link" href="mailto:despoinidisk@gmail.com">Email</a>
+            <span> | </span>
+            <a class="hover-link" target="_blank" href="https://www.linkedin.com/in/konstantinos-despoinidis/">LinkedIn</a>
+
+        </div>
+
+        <div class="pad2">
+            Konstantinos Despoinidis <span style="font-weight: bold">@2022</span>
+        </div>
+
+    </footer>
+
+
+
   </main>
 </body>
+
+<style>
+    footer{
+        z-index: 1;
+        padding: 40px 0 40px 0;
+        place-items: center;
+        width: 100%;
+        background-color: var(--bg-secondary);
+        height: 200px;
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 20px 50px;
+        grid-template-areas:
+            "pad1 pad2";
+    }
+
+    .pad1 {
+        grid-area: pad1;
+        float: left;
+    }
+    .pad2 { grid-area: pad2; }
+
+    .small-box{
+        display: none;
+    }
+</style>
 
 <script type="text/javascript">
     function notFound(){
