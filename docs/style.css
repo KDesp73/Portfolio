@@ -204,16 +204,6 @@ footer{
         margin: 0;
     }
 
-    #small-box{
-        margin: 2rem;
-        margin-top: 4rem;
-        margin-bottom: 0;
-        width: auto;
-        padding: 4rem;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
-
     #top{
         margin-top: 2em;
         margin-right: 0;
@@ -222,30 +212,6 @@ footer{
 }
 
 
-@keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
-
-@-moz-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
-
-@-webkit-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
-
-@-o-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
-
-@-ms-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
 
 /* Large screens */
 @media only screen and (min-width: 1000px) {
@@ -290,4 +256,30 @@ footer{
   html {
     scroll-behavior: smooth;
   }
+}
+
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
 }

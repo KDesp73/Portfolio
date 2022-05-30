@@ -28,8 +28,9 @@
         display: flex;
         flex-direction: column;
         margin: 0;
-
+        margin-left: 5rem;
         padding-top: 0;
+        margin-bottom: calc(100vh + 50px);
     }
 
     .home-container{
@@ -253,32 +254,76 @@
         align-items: center;
         justify-content: center;
         list-style: none;
-        position: relative;
 
         box-shadow: 4px 4px 13px -6px black;
         z-index: 1;
     }
 
-    .second-navbar > ul{
+
+
+    .text{
+        font-weight: bold;
+        color: white;
         position: absolute;
-        width: 50%;
-        display: flex;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+    }
+
+    .dropbtn {
+        background-color: var(--base-color);
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        height: 5rem;
+        width: 10rem;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 
     }
 
-    .second-navbar > a{
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        width: 10rem;
+    }
+
+    .dropbtn:hover{
+        border-radius: 10px 10px 0 0;
+        transition: ease-in-out 300ms;
+        cursor: pointer;
+        transform: translateY(15px);
+
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 10rem;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
         text-decoration: none;
-        flex-direction: row;
-
+        display: block;
     }
 
-    .items{
-        display: flex;
-        align-items: center;
-        width: 5rem;
+    .dropdown-content a:hover {background-color: #ddd;}
+
+    .dropdown:hover .dropdown-content {display: block; transform: translateY(15px); transition: ease-in-out 300ms;}
+
+    .dropdown:hover .dropbtn {background-color: var(--bg-primary); transform: translateY(15px); border-radius: 10px 10px 0 0; transition: ease-in-out 300ms;}
+
+    .seperator{
+        width: 10px;
+        background-color: var(--bg-primary);
     }
-
-
 </style>
 
 <script>
@@ -419,24 +464,42 @@
 
 
         <nav class="second-navbar">
-            <ul>
-                <li class="items">
-                    <a href="">
-                        youtube
-                    </a>
-                </li>
-                <li class="items">
-                    <a href="">
-                        youtube
-                    </a>
-                </li>
-                <li class="items">
-                    <a href="">
-                        youtube
-                    </a>
-                </li>
-            </ul>
 
+            <div class="dropdown">
+                <button class="dropbtn">WebTools</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <div class="seperator"></div>
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <div class="seperator"></div>
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <div class="seperator"></div>
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
         </nav>
 
         <section class="section1">
@@ -447,24 +510,27 @@
 
         </section>
         <section class="section2">
+            <h3>Programming Languages</h3>
+            <p>
+                The first language I ever wrote code with was BASIC. Not visual basic... <a class="school" style="font-weight: bold" href="https://el.wikipedia.org/wiki/BASIC" target="_blank">BASIC</a> (Beginner's All Purpose Symbolic Instruction Code). I proberly started learning to code with Python when I was 16 and I built some really small projects. After that I learnt some HTML, CSS and Javascript. In school, we started with C for structured programming and continued with Java for OOP.
+            </p>
+        </section>
+        <section class="section1">
+            <h3>Other related interests</h3>
+            <p>
+                Electronics are also a subject my school teaches, so I have some experience in that area too. I built some projects with arduino which also needs some coding.
+            </p>
+
+        </section>
+        <section class="section2">
             <h3>Hobbies</h3>
             <p>
                 I studied the guitar for 10 years and I've been playing for 12 years now. I'm a bit of a nerd when it comes to comics and comic book movies (and in general to be honest). Let's say I like them a little too much... I'm also into cubing.
             </p>
         </section>
-        <section class="section1">
-            <h3>Title</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore impedit quo eaque, ex molestias totam sit quasi quidem fuga ea, autem dolores, velit obcaecati. Optio dolores aperiam minus voluptate, eum.
-            </p>
 
-        </section>
-        <section class="section2">
-            <h3>Title</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem nam in commodi quia, explicabo at! Laboriosam, porro veniam ratione quaerat vero eius id laborum, explicabo tenetur consequatur qui, facilis repudiandae!
-            </p>
-        </section>
+
+
         <section class="small-box" id="small-box">
             <ul>
                 <li>
@@ -483,38 +549,37 @@
             </ul>
         </section>
     </div>
-
-    <footer>
-        <div class="pad1">
-            <a href="" class="hover-link" onclick="notFound()">Resume</a>
-            <span> | </span>
-            <a href="https://forms.gle/UCULsfBeMYp12xv3A" class="hover-link" target="_blank">Feedback</a>
-            <span> | </span>
-            <a class="hover-link" href="mailto:despoinidisk@gmail.com">Email</a>
-            <span> | </span>
-            <a class="hover-link" target="_blank" href="https://www.linkedin.com/in/konstantinos-despoinidis/">LinkedIn</a>
-
-        </div>
-
-        <div class="pad2">
-            Konstantinos Despoinidis <span style="font-weight: bold">@2022</span>
-        </div>
-
-    </footer>
-
-
-
   </main>
+  <footer>
+      <div class="pad1">
+          <a href="" class="hover-link" onclick="notFound()">Resume</a>
+          <span> | </span>
+          <a href="https://forms.gle/UCULsfBeMYp12xv3A" class="hover-link" target="_blank">Feedback</a>
+          <span> | </span>
+          <a class="hover-link" href="mailto:despoinidisk@gmail.com">Email</a>
+          <span> | </span>
+          <a class="hover-link" target="_blank" href="https://www.linkedin.com/in/konstantinos-despoinidis/">LinkedIn</a>
+
+      </div>
+
+      <div class="pad2">
+          <i>©2022 Konstantinos Despoinidis</i>
+      </div>
+
+  </footer>
 </body>
 
 <style>
     footer{
+        top: 100%;
+        position: sticky;
+        margin-left: 3rem;
         z-index: 1;
         padding: 40px 0 40px 0;
         place-items: center;
         width: 100%;
         background-color: var(--bg-secondary);
-        height: 200px;
+        height: 30px;
         display: grid;
         grid-auto-columns: 1fr;
         grid-auto-rows: 1fr;
