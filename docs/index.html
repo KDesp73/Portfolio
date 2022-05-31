@@ -63,6 +63,13 @@
         -ms-animation: fadeIn 3s;
     }
 
+    @media only screen and (max-width: 1000px) {
+        header{
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
     @keyframes fadeIn {
         0% {opacity:0;}
         100% {opacity:1;}
@@ -124,15 +131,6 @@
     .hovertext:hover:before {
         opacity: 0.7;
         visibility: visible;
-    }
-
-    header{
-        /*
-        background-image: url("images/waves.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        */
-        color: black;
     }
 
     header > p{
@@ -259,17 +257,6 @@
         z-index: 1;
     }
 
-
-
-    .text{
-        font-weight: bold;
-        color: white;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%);
-    }
-
     .dropbtn {
         background-color: var(--base-color);
         color: white;
@@ -327,6 +314,36 @@
         width: 20px;
         background-color: var(--bg-primary);
     }
+
+    .logo2{
+        display: none;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .second-navbar .dropdown{
+            display: none;
+        }
+
+        .second-navbar{
+        }
+
+        .logo2{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            letter-spacing: 0.3ch;
+            text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+        }
+    }
+
+
 </style>
 
 <script>
@@ -467,7 +484,7 @@
 
 
         <nav class="second-navbar">
-
+            <div class="logo2">KDESP</div>
             <div class="dropdown">
                 <button class="dropbtn">WebDevTools</button>
                 <div class="dropdown-content">
@@ -516,28 +533,28 @@
 
         <section class="section1">
             <h3>Currently</h3>
-            <p>
+            <p class="sec-par">
                 I really love programming. It's got to the point where it has become an addiction, in a good sense... <a href="https://www.iee.ihu.gr/en/" class="school" target="_blank"><span style="font-weight: bold">My school</span></a>, provides enough information to keep me interested in the subject.
             </p>
 
         </section>
         <section class="section2">
             <h3>Programming Languages</h3>
-            <p>
+            <p class="sec-par">
                 The first language I ever wrote code with was BASIC. Not visual basic... <a class="school" style="font-weight: bold" href="https://el.wikipedia.org/wiki/BASIC" target="_blank">BASIC</a> (Beginner's All Purpose Symbolic Instruction Code). I proberly started learning to code with Python when I was 16 and I built some really small projects. After that I learnt some HTML, CSS and Javascript. In university, we started with C for structured programming and continued with Java for OOP.
             </p>
         </section>
         <section class="section1">
             <h3>Other related interests</h3>
-            <p>
+            <p class="sec-par">
                 Electronics are also a subject my school teaches, so I have some experience in that area too. I built some projects with arduino which also involves some coding.
             </p>
             <img src="images/project-images/raster.jpg" alt="7-segment display" width="400" height="120" style="border-radius: 10px; box-shadow: 4px 4px 13px -6px black; margin-top: 2em;">
 
         </section>
-        <section class="section2">
+        <section class="section2 last">
             <h3>Hobbies</h3>
-            <p>
+            <p class="sec-par">
                 I studied the guitar for 10 years and I've been playing for 12 years now. I'm a bit of a nerd when it comes to comics and comic book movies (and in general to be honest). Let's say I like them a little too much... I'm also into cubing.
             </p>
         </section>
@@ -554,16 +571,34 @@
                 </li>
             </ul>
         </section>
-        <section class="small-box" id="small-box">
+        <section class="small-box no" id="small-box">
             <h3>How to contact me</h3>
             <ul>
                 <li><a class="hover-link" href="mailto:despoinidisk@gmail.com">Email</a></li>
                 <li><a class="hover-link" target="_blank" href="https://www.linkedin.com/in/konstantinos-despoinidis/">LinkedIn</a></li>
             </ul>
         </section>
+        <section class="small-box footer" id="footer">
+            <div class="pad1">
+                <a href="" class="hover-link" onclick="notFound()">Resume</a>
+                <span> | </span>
+                <a href="https://forms.gle/UCULsfBeMYp12xv3A" class="hover-link" target="_blank">Feedback</a>
+                <span> | </span>
+                <a class="hover-link" href="mailto:despoinidisk@gmail.com">Email</a>
+                <span> | </span>
+                <a class="hover-link" target="_blank" href="https://www.linkedin.com/in/konstantinos-despoinidis/">LinkedIn</a>
+
+            </div>
+
+            <div class="pad2">
+                <i>©2022 Konstantinos Despoinidis</i>
+            </div>
+        </section>
     </div>
+
   </main>
-  <footer>
+  <div class="space"></div>
+  <footer id="home-footer">
       <div class="pad1">
           <a href="" class="hover-link" onclick="notFound()">Resume</a>
           <span> | </span>
@@ -583,8 +618,13 @@
 </body>
 
 <style>
-    footer{
+    .space{
+        height: 60px;
+    }
+
+    #home-footer{
         top: 100%;
+        bottom: 0;
         position: sticky;
         margin-left: 3rem;
         z-index: 1;
@@ -609,8 +649,50 @@
     }
     .pad2 { grid-area: pad2; }
 
-    .small-box{
+    #small-box{
         display: none;
+    }
+
+    #footer{
+        visibility: hidden;
+    }
+
+
+
+    /*New home page*/
+    @media only screen and (max-width: 1000px) {
+        main{
+            margin: 0 0 10rem 0;
+        }
+
+        #home-footer{
+            visibility: hidden;
+        }
+
+        #footer{
+            visibility: visible;
+            margin-bottom: 10rem;
+            line-height: 40px;
+            background-color: var(--bg-secondary);
+            border-radius: 20px
+        }
+
+        .home-container > header{
+            margin:0 0 0 0;
+            padding: 0;
+        }
+
+        .seperator{
+            width: 0.6em;
+        }
+
+        .space{
+            height: 0%;
+        }
+
+        .pad2{
+            margin-top: 40%;
+        }
     }
 </style>
 

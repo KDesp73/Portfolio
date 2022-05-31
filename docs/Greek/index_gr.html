@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="theme.js"></script>
     <link rel="stylesheet" href="../style.css" />
-    <script src="script.js" async></script>
+    <script src="../script.js" async></script>
     <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
     rel="stylesheet"
@@ -61,6 +61,13 @@
         -moz-animation: fadeIn 3s;
         -o-animation: fadeIn 3s;
         -ms-animation: fadeIn 3s;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        header{
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 
     @keyframes fadeIn {
@@ -124,15 +131,6 @@
     .hovertext:hover:before {
         opacity: 0.7;
         visibility: visible;
-    }
-
-    header{
-        /*
-        background-image: url("images/waves.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        */
-        color: black;
     }
 
     header > p{
@@ -259,17 +257,6 @@
         z-index: 1;
     }
 
-
-
-    .text{
-        font-weight: bold;
-        color: white;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%);
-    }
-
     .dropbtn {
         background-color: var(--base-color);
         color: white;
@@ -327,6 +314,36 @@
         width: 20px;
         background-color: var(--bg-primary);
     }
+
+    .logo2{
+        display: none;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .second-navbar .dropdown{
+            display: none;
+        }
+
+        .second-navbar{
+        }
+
+        .logo2{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            letter-spacing: 0.3ch;
+            text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+        }
+    }
+
+
 </style>
 
 <script>
@@ -434,8 +451,8 @@
         </a>
       </li>
 
-      <li class="nav-item">
-        <a href="..\index.html" class="nav-link">
+      <li class="nav-item" onclick="loadGreek()">
+        <a href="../index.html" class="nav-link">
         <img src="..\images\united-kingdom.png" alt="" class="greece" viewBox="0 0 512 512">
         <style>
             .greece{
@@ -467,7 +484,7 @@
 
 
         <nav class="second-navbar">
-
+            <div class="logo2">KDESP</div>
             <div class="dropdown">
                 <button class="dropbtn">WebDevTools</button>
                 <div class="dropdown-content">
@@ -493,7 +510,7 @@
             </div>
             <div class="seperator"></div>
             <div class="dropdown">
-                <button class="dropbtn">Προγραμματα για κώδικα</button>
+                <button class="dropbtn">Τα εργαλεία μου για κώδικα</button>
                 <div class="dropdown-content">
                     <a href="https://sourceforge.net/projects/orwelldevcpp/" target="_blank">DevC++</a>
                     <a href="https://atom.io/" target="_blank">Atom</a>
@@ -516,28 +533,28 @@
 
         <section class="section1">
             <h3>Αυτή τη στιγμή</h3>
-            <p>
-                Μου αρέσει πολύ ο προγραμματισμός. Έχει φτάσει στο σημείο να γίνει εθισμός, με την καλή έννοια του όρου... <a class="school" href="https://www.iee.ihu.gr/" class="hover-link" target="_blank"><span style="font-weight: bold">Η σχολή μου</span></a>, παρέχει αρκετές πληροφορίες ώστε να κινεί το ενδιαφέρον μου για το αντικείμενο.
+            <p class="sec-par">
+                Με λένε Κωνσταντίνο Δεσποινίδη και σπουδάζω στο τμήμα Μηχανικών Πληροφορικής και Ηλεκτρονικών Συστημάτων στο Διεθνές Πανεπιστήμιο της Ελλάδος.
             </p>
 
         </section>
         <section class="section2">
-            <h3>Γλώσσες προγραμματισμού</h3>
-            <p>
-                Η πρώτη γλώσσα με την οποία έγραψα κώδικα ήταν η BASIC. Όχι η visual basic...  η <a class="school" style="font-weight: bold" href="https://el.wikipedia.org/wiki/BASIC" target="_blank">BASIC</a> (Beginner's All Purpose Symbolic Instruction Code). Ξεκίνησα να μαθαίνω κώδικα με την Python όταν ήμουν 16 ετών και έκανα μικρα πρότζεκτ. Μετά από αυτό έμαθα HTML, CSS και Javascript. Στο πανεπιστήμιο, ξεκινήσαμε με C για δομημένο προγραμματισμό και συνεχίσαμε με Java για OOP.
+            <h3>Γλώσσες Προγραμματισμού</h3>
+            <p class="sec-par">
+                Μου αρέσει πολύ ο προγραμματισμός. Έχει φτάσει στο σημείο να γίνει εθισμός, με την καλή έννοια του όρου... <a class="school" href="https://www.iee.ihu.gr/" class="hover-link" target="_blank"><span style="font-weight: bold">Η σχολή μου</span></a>, παρέχει αρκετές πληροφορίες ώστε να κινεί το ενδιαφέρον μου για το αντικείμενο.
             </p>
         </section>
         <section class="section1">
             <h3>Άλλα σχετικά ενδιαφέροντα</h3>
-            <p>
-                Τα ηλεκτρονικά είναι επίσης ένα μάθημα που διδάσκεται στο σχολείο μου, οπότε έχω κάποια εμπειρία και σε αυτόν τον τομέα. Έχω κάνει μερικά προτζεκτ με arduino, τα οποία επίσης χρειάζονται και κώδικα.
+            <p class="sec-par">
+                Τα ηλεκτρονικά είναι επίσης ένα μάθημα που διδάσκεται στο σχολείο μου, οπότε έχω κάποια εμπειρία και σε αυτόν τον τομέα.
             </p>
             <img src="../images/project-images/raster.jpg" alt="7-segment display" width="400" height="120" style="border-radius: 10px; box-shadow: 4px 4px 13px -6px black; margin-top: 2em;">
 
         </section>
-        <section class="section2">
+        <section class="section2 last">
             <h3>Ασχολίες</h3>
-            <p>
+            <p class="sec-par">
                 "Πήγαινα" κιθάρα για 10 χρόνια και παίζω εδώ και 12. Μου αρέσουν πολύ τα κόμικς και οι ταινίες κόμικς αλλά και γενικότερα οι σειρές και ο κινηματογράφος. Επίσης, ασχολούμαι σε μεγάλο βαθμό και με παζλ τύπου κύβου του Ρούμπικ.
             </p>
         </section>
@@ -554,18 +571,36 @@
                 </li>
             </ul>
         </section>
-        <section class="small-box" id="small-box">
+        <section class="small-box no" id="small-box">
             <h3>How to contact me</h3>
             <ul>
                 <li><a class="hover-link" href="mailto:despoinidisk@gmail.com">Email</a></li>
                 <li><a class="hover-link" target="_blank" href="https://www.linkedin.com/in/konstantinos-despoinidis/">LinkedIn</a></li>
             </ul>
         </section>
+        <section class="small-box footer" id="footer">
+            <div class="pad1">
+                <a href="" class="hover-link" onclick="notFound()">Βιογραφικό</a>
+                <span> | </span>
+                <a href="https://forms.gle/UCULsfBeMYp12xv3A" class="hover-link" target="_blank">Feedback</a>
+                <span> | </span>
+                <a class="hover-link" href="mailto:despoinidisk@gmail.com">Email</a>
+                <span> | </span>
+                <a class="hover-link" target="_blank" href="https://www.linkedin.com/in/konstantinos-despoinidis/">LinkedIn</a>
+
+            </div>
+
+            <div class="pad2">
+                <i>©2022 Κωνσταντίνος Δεσποινίδης</i>
+            </div>
+        </section>
     </div>
+
   </main>
-  <footer>
+  <div class="space"></div>
+  <footer id="home-footer">
       <div class="pad1">
-          <a href="" class="hover-link" onclick="notFound()">Resume</a>
+          <a href="" class="hover-link" onclick="notFound()">Βιογραφικό</a>
           <span> | </span>
           <a href="https://forms.gle/UCULsfBeMYp12xv3A" class="hover-link" target="_blank">Feedback</a>
           <span> | </span>
@@ -576,15 +611,20 @@
       </div>
 
       <div class="pad2">
-          <i>©2022 Konstantinos Despoinidis</i>
+          <i>©2022 Κωνσταντίνος Δεσποινίδης</i>
       </div>
 
   </footer>
 </body>
 
 <style>
-    footer{
+    .space{
+        height: 60px;
+    }
+
+    #home-footer{
         top: 100%;
+        bottom: 0;
         position: sticky;
         margin-left: 3rem;
         z-index: 1;
@@ -609,8 +649,50 @@
     }
     .pad2 { grid-area: pad2; }
 
-    .small-box{
+    #small-box{
         display: none;
+    }
+
+    #footer{
+        visibility: hidden;
+    }
+
+
+
+    /*New home page*/
+    @media only screen and (max-width: 1000px) {
+        main{
+            margin: 0 0 10rem 0;
+        }
+
+        #home-footer{
+            visibility: hidden;
+        }
+
+        #footer{
+            visibility: visible;
+            margin-bottom: 10rem;
+            line-height: 40px;
+            background-color: var(--bg-secondary);
+            border-radius: 20px
+        }
+
+        .home-container > header{
+            margin:0 0 0 0;
+            padding: 0;
+        }
+
+        .seperator{
+            width: 0.6em;
+        }
+
+        .space{
+            height: 0%;
+        }
+
+        .pad2{
+            margin-top: 40%;
+        }
     }
 </style>
 
