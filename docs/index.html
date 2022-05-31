@@ -320,6 +320,12 @@
     }
 
     @media only screen and (max-width: 600px) {
+        html{
+            overflow-x: hidden;
+            overflow-y: visible;
+            height: 100vh;
+        }
+    }
         .second-navbar .dropdown{
             display: none;
         }
@@ -341,9 +347,19 @@
             letter-spacing: 0.3ch;
             text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
         }
+        .raster{
+            width: 80%;
+            height: auto;
+        }
     }
 
-
+    .raster{
+        width: 400;
+        height: 120;
+        border-radius: 10px;
+        box-shadow: 4px 4px 13px -6px black;
+        margin-top: 2em;"
+    }
 </style>
 
 <script>
@@ -549,7 +565,7 @@
             <p class="sec-par">
                 Electronics are also a subject my school teaches, so I have some experience in that area too. I built some projects with arduino which also involves some coding.
             </p>
-            <img src="images/project-images/raster.jpg" alt="7-segment display" width="400" height="120" style="border-radius: 10px; box-shadow: 4px 4px 13px -6px black; margin-top: 2em;">
+            <img class="raster" src="images/project-images/raster.jpg" alt="7-segment display" width="400" height="120" style="border-radius: 10px; box-shadow: 4px 4px 13px -6px black; margin-top: 2em;">
 
         </section>
         <section class="section2 last">
