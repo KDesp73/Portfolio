@@ -320,6 +320,13 @@
     }
 
     @media only screen and (max-width: 600px) {
+
+        html{
+            overflow-x: hidden;
+            overflow-y: visible;
+            height: 100vh;
+        }
+
         .second-navbar .dropdown{
             display: none;
         }
@@ -341,8 +348,20 @@
             letter-spacing: 0.3ch;
             text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
         }
+
+        .raster{
+            width: 80%;
+            height: auto;
+        }
     }
 
+    .raster{
+        width: 400;
+        height: 120;
+        border-radius: 10px;
+        box-shadow: 4px 4px 13px -6px black;
+        margin-top: 2em;"
+    }
 
 </style>
 
@@ -549,7 +568,7 @@
             <p class="sec-par">
                 Τα ηλεκτρονικά είναι επίσης ένα μάθημα που διδάσκεται στο σχολείο μου, οπότε έχω κάποια εμπειρία και σε αυτόν τον τομέα.
             </p>
-            <img src="../images/project-images/raster.jpg" alt="7-segment display" width="400" height="120" style="border-radius: 10px; box-shadow: 4px 4px 13px -6px black; margin-top: 2em;">
+            <img class="raster" src="../images/project-images/raster.jpg" alt="7-segment display" width="400" height="120" style="border-radius: 10px; box-shadow: 4px 4px 13px -6px black; margin-top: 2em;">
 
         </section>
         <section class="section2 last">
@@ -654,6 +673,8 @@
     }
 
     #footer{
+        margin-top: 5em;
+        margin-bottom: 0;
         visibility: hidden;
     }
 
