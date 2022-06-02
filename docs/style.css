@@ -3,7 +3,7 @@
     font-family: 'Open Sans';
     /*font-family: 'Poppins', sans-serif;*/
     --text-primary: #b6b6b6;
-    --text-secondary: #ececec;
+    --text-secondary: #808080;
     --bg-primary: #23232e;
     --bg-secondary: #141418;
     --transition-speed: 600ms;
@@ -33,7 +33,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #6649b8;
+    background: var(--base-color);
     z-index: 0;
 }
 
@@ -209,7 +209,7 @@ footer{
         margin-bottom: 1em;
     }
 
-    
+
 }
 
 
