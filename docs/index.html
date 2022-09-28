@@ -49,7 +49,7 @@
 
     header > h1{
         color: black;
-        margin-top: 1.5em;
+        margin-top: 1.8em;
         font-family: 'Staatliches', cursive;
         text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
     }
@@ -149,11 +149,6 @@
         width: 100%;
     }
 
-    .section1 > p{
-        color: #727272;
-        margin: 0 3em 0 3em;
-        font-size: 85%;
-    }
     .section2 {
         color: black;
 
@@ -164,8 +159,8 @@
         width: 100%;
     }
 
-    .section2 > p{
-        color: #727272;
+    .secondary-text{
+        color: var(--text-secondary);
         margin: 0 3em 0 3em;
         font-size: 85%;
     }
@@ -363,6 +358,9 @@
         margin-top: 2em;
     }
 
+    .button-text{
+        font-weight: bold;
+    }
 </style>
 
 <script>
@@ -505,7 +503,7 @@
         <nav class="second-navbar">
             <div class="logo2">KDESP</div>
             <div class="dropdown">
-                <button class="dropbtn">WebDevTools</button>
+                <button class="dropbtn"><span class="button-text">WebDevTools</span></button>
                 <div class="dropdown-content">
                     <a href="https://haikei.app/" target="_blank">Haikei</a>
                     <a href="https://fontawesome.com/icons" target="_blank">FontAwesome</a>
@@ -517,7 +515,7 @@
             </div>
             <div class="seperator"></div>
             <div class="dropdown">
-                <button class="dropbtn">Electronics</button>
+                <button class="dropbtn"><span class="button-text">Electronics</span></button>
                 <div class="dropdown-content">
                     <a href="https://www.futurlec.com/index.shtml" target="_blank">Futurlec</a>
                     <a href="https://www.alldatasheet.com/" target="_blank">AllDatasheet</a>
@@ -529,7 +527,7 @@
             </div>
             <div class="seperator"></div>
             <div class="dropdown">
-                <button class="dropbtn">My Coding Tools</button>
+                <button class="dropbtn"><span class="button-text">My Coding Tools</span></button>
                 <div class="dropdown-content">
                     <a href="https://sourceforge.net/projects/orwelldevcpp/" target="_blank">DevC++</a>
                     <a href="https://atom.io/" target="_blank">Atom</a>
@@ -552,20 +550,20 @@
 
         <section class="section1">
             <h3>Currently</h3>
-            <p class="sec-par">
+            <p class="secondary-text">
                 I really love programming. It's got to the point where it has become an addiction, in a good sense... <a href="https://www.iee.ihu.gr/en/" class="school" target="_blank"><span style="font-weight: bold">My school</span></a>, provides enough information to keep me interested in the subject.
             </p>
 
         </section>
         <section class="section2">
             <h3>Programming Languages</h3>
-            <p class="sec-par">
+            <p class="secondary-text">
                 The first language I ever wrote code with was BASIC. Not visual basic... <a class="school" style="font-weight: bold" href="https://el.wikipedia.org/wiki/BASIC" target="_blank">BASIC</a> (Beginner's All Purpose Symbolic Instruction Code). I properly started learning to code with Python when I was 16 and I built some really small projects. After that I learnt some HTML, CSS and Javascript. In university, we started with C for structured programming and continued with Java for OOP.
             </p>
         </section>
         <section class="section1">
             <h3>Other related interests</h3>
-            <p class="sec-par">
+            <p class="secondary-text">
                 Electronics are also a subject my school teaches, so I have some experience in that area too. I built some projects with arduino which also involves some coding.
             </p>
             <img class="raster" src="images/project-images/raster.jpg" alt="7-segment display" width="400" height="120" style="border-radius: 10px; box-shadow: 4px 4px 13px -6px black; margin-top: 2em;">
@@ -573,7 +571,7 @@
         </section>
         <section class="section2 last">
             <h3>Hobbies</h3>
-            <p class="sec-par">
+            <p class="secondary-text">
                 I studied the guitar for 10 years and I've been playing for 12 years now. I'm a bit of a nerd when it comes to comics and comic book movies (and in general to be honest). Let's say I like them a little too much... I'm also into cubing.
             </p>
         </section>
