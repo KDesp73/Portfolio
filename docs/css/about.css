@@ -1,0 +1,48 @@
+.introduction {
+  padding: 2em;
+  font-size: 1.3em;
+  margin-top: 4em;
+  width: 70%;
+
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.introduction p {
+  line-height: 2em;
+}
+
+.subtitle{
+  color: gray;
+}
+
+main{
+  padding-bottom: 5em;
+}
+
+@media (max-width: 600px) {
+  /*#error{
+    display: none;
+  }
+*/
+
+  .welcome {
+    font-size: 2.5em;
+  }
+
+  .introduction {
+    width: 90%;
+    margin: 5em 0 5em 5em;
+    font-size: 1em;
+    margin: 0;
+    margin-top: 5em;
+  }
+
+  .small {
+    font-size: 1.8em;
+  }
+}

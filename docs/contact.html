@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="icon" href="./assets/svgs/kd-logo.svg">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-logo"></div>
+      <h2 class="logo-text"></h2>
+    </nav>
+    <button class="navbar-burger" onclick="toggleMenu()"></button>
+    <nav class="menu">
+      <a href="index.html" style="animation-delay: 0.1s">Αρχική</a>
+      <a href="projects.html" style="animation-delay: 0.2s">Πρότζεκτ</a>
+      <a href="favourites.html" style="animation-delay: 0.3s">Αγαπημένα</a>
+      <a href="about.html" style="animation-delay: 0.4s">Σχετικά</a>
+      <a href="contact.html" style="animation-delay: 0.5s">Επικοινωνία</a>
+    </nav>
+
+    <main>
+      <div class="container" id="container">
+        <div class="form" id="form">
+          <div class="title">Επικοινώνησε!</div>
+          <div class="input-container ic1">
+            <input id="firstname" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="firstname" class="placeholder">Όνομα</label>
+          </div>
+          <div class="input-container ic2">
+            <input id="lastname" class="input" type="text" placeholder=" " />
+            <div class="cut cut-large"></div>
+            <label for="lastname" class="placeholder">Επίθετο</label>
+          </div>
+          <div class="input-container ic2">
+            <input id="email" class="input" type="text" placeholder=" " />
+            <div class="cut cut-short"></div>
+            <label for="email" class="placeholder">Email</label>
+          </div>
+          <div class="input-container ic2 textarea">
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="2"
+              maxlength="100"
+              placeholder=" "
+              onchange="checkLength()"
+            ></textarea>
+            <div class="cut cut-large"></div>
+            <label for="email" class="placeholder">Μήνυμα</label>
+          </div>
+          <button class="submit" id="submit" onclick="checkInput()">
+            Υποβολή
+          </button>
+        </div>
+        <div class="icons-bar" id="icons-bar">
+          <a href="https://github.com/KDesp73" target="_blank" id="first"><div class="icon github first"></div></a>
+          <a href="https://www.linkedin.com/in/konstantinos-despoinidis/" target ="_blank" id="icon"><div class="icon linkedin"></div></a>
+          <a href="mailto: despoinidisk@gmail.com" target ="_blank" id="ico"><div class="icon email"></div></a>
+          <a href="https://www.instagram.com/despoinidis_k/" target ="_blank" id="ic"><div class="icon instagram"></div></a>
+          <a href="#" onclick="copyToClipboard()" id="i"><div class="icon discord"></div></a>
+        </div>
+      </div>
+      <div class="container-sent" id="container-sent">
+        <div class="sent" id="sent"><h3>Το μήνυμα σας στάλθηκε <br> με επιτυχία</h3></div>
+        <div class="icons-bar-sent" id="icons-bar-sent">
+          <a href="https://github.com/KDesp73" target="_blank" id="first" class="icon-sent github first-sent"><div ></div></a>
+          <a href="https://www.linkedin.com/in/konstantinos-despoinidis/" target ="_blank" class="icon-sent linkedin"><div ></div></a>
+          <a href="mailto: despoinidisk@gmail.com" target ="_blank" id="ico" class="icon-sent email-sent"><div></div></a>
+          <a href="https://www.instagram.com/despoinidis_k/" target ="_blank" id="ic" class="icon-sent instagram"><div ></div></a>
+          <a href="#" onclick="copyToClipboard()" id="i" class="icon-sent discord"><div ></div></a>
+        </div>
+      </div>
+      
+    </main>
+  </body>
+</html>
