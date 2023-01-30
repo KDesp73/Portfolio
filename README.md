@@ -1,4 +1,4 @@
 # My-Portfolio
 My first attempt at constructing a complete website
 
-![first_site](https://user-images.githubusercontent.com/63654361/215510927-942ca946-d940-4660-a506-42b47a00c335.png)
+![portfolio](https://user-images.githubusercontent.com/63654361/215619447-08709fe5-f99f-4cc0-a462-4dfcbdc9e477.png)
