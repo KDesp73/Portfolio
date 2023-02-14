@@ -1,129 +1,99 @@
+@import "fonts.css";
 
 
-@font-face {
-  font-family: "Lobster";
-  src: url("../static/Lobster.otf");
+/*Different settings from the other documents*/
+* {
+    font-family: "Rubik";
+    --fancy: "Nothing-You-Could-Do";
+    --primary: #001220;
+    --secondary: #c7112f;
 }
 
-main{
-  padding: 0;
+body {
+    margin: 0;
+    padding: 0;
 }
 
-.space-between {
-  height: 60px;
-}
-
-.box:nth-child(even){
-  background-color: var(--dark-blue);
-  color: white;
-}
-.box:nth-child(odd){
-  background-color: transparent;
-  color: black;
-}
-
-.content{
-  width: 100vw;
-  height: 100%;
-  bottom: 0;
-  margin: 0;
-}
-
-.box{
-  font-size: 1.2em;
-  line-height: 1.5em;
-  padding: 50px 300px;
-  height: auto;
-  width: 100vw;
-  display: grid;
-  place-items: center;
-}
-
-.welcome {
-  margin: 50px 0;
-  font: 6em bolder;
-  font-family: "Lobster";
-}
-
-footer {
-  margin-bottom: 0;
-  margin-top: 100px;
-}
-
-.link {
-  width: 100vw;
-  height: 400px;
-  background-color: transparent;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.item {
-  width: 310px;
-  height: 310px;
-  background-color: white;
-  border-radius: 20px;
-  margin-right: 30px;
-}
-
-.item:hover {
-  cursor: pointer;
-  opacity: 80%;
-}
-
-#sxolh {
-  margin-left: 30px;
-  background-image: url(../assets/images/κατάλογος.png);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: contain;
-}
-
-#paragraph{
-  margin-left: 50px;
-  color: white;
-  width: 600px;
-  font-size: 1.1em;
-  line-height: 1.8em;
+main {
+    margin: 0;
+    padding: 0;
 }
 
 
+.fancy {
+    font-family: var(--fancy);
+}
 
-@media (max-width: 600px) {
-  .welcome {
-    font-size: 4em;
-  }
+.side {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    position: absolute;
 
-  .box{
-    padding: 40px 60px;
-  }
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1.8fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "nav"
+        "title";
+}
 
-  footer{
-    font-size: 80%;
-  }  
+.nav { grid-area: nav; }
+.title { grid-area: title; }
 
-  .link {
-    height: 200px;
-  }
+.side .title {
+    font-size: 8vw;
+    margin: 0 15vw;
+    width: 70vw;
+}
 
-  .item {
-    width: 320px;
-    height: 130px;
-    margin-right: 10px;
-  }
+.cv {
+    --margin: 20px;
+    width: 150px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    bottom: var(--margin); 
+    right: var(--margin); 
+    z-index: 5;
+    color: var(--primary);
+    background-color: white;
+    border-radius: 24px;
+}
 
-  #paragraph{
-    overflow-y: auto;
-    font-size: 0.7em;
-    height: 160px;
-    width: 400px;
-    margin-right: 10px;
-  }
+.cv > a {
+    text-decoration: none;
+}
 
-  .container {
-    width: 90%;
-    font-size: 80%;
-  }
+.cv:hover {
+    transform: scale(110%);
+}
+
+#left-side {
+    background-color: var(--primary);
+    z-index: 2;
+}
+
+#left-side .title {
+    color: white;
+}
+
+#left-side .fancy {
+    color: var(--secondary);
+}
+
+#right-side {
+    color: black;
+    background-color: var(--secondary);
+}
+
+#right-side .fancy {
+    color: white;
+}
+
+#right-side .link {
+    color: black;
 }

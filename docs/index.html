@@ -1,165 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="icon" href="./assets/svgs/kd-logo.svg" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/home.css" />
-    <link rel="stylesheet" href="./css/underline.css" />
-    <link rel="stylesheet" href="./css/tools.css" />
-    <script src="script.js"></script>
-  </head>
 
-  <body>
-    <nav class="navbar">
-      <div class="navbar-logo"></div>
-      <h2 class="logo-text"></h2>
-    </nav>
-    <button class="navbar-burger" onclick="toggleMenu()"></button>
-    <nav class="menu">
-      <a href="index.html" style="animation-delay: 0.1s">Αρχική</a>
-      <a href="projects.html" style="animation-delay: 0.2s">Πρότζεκτ</a>
-      <a href="favourites.html" style="animation-delay: 0.3s">Αγαπημένα</a>
-      <a href="about.html" style="animation-delay: 0.4s">Σχετικά</a>
-      <a href="contact.html" style="animation-delay: 0.5s">Επικοινωνία</a>
-    </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <script src="./scripts/mouse_movement.js" async></script>
+    <title>Portfolio</title>
+</head>
 
+<body>
     <main>
-      <div class="content">
-        <div class="box">
-          <p class="welcome">Welcome!</p>
+        
+
+        <div id="left-side" class="side">
+            <nav class="nav">
+                <ul>
+                    <li><a class="link" href="./index.html">Home &nbsp&nbsp</a></li>
+                    <li><a class="link" href="./projects.html">&nbspProjects&nbsp&nbsp</a></li>
+                    <li><a class="link" href="./skills.html">&nbspSkills&nbsp&nbsp</a></li>
+                    <li><a class="link" href="./contact.html">&nbspContact</a></li>
+                </ul>
+            </nav>
+
+            <h2 class="title">I am a <span class="fancy">student</span></h2>
+
+            
         </div>
-        <div class="box" style="font-size: 1.4em;">
-          Με λένε Κωνστανίνο Δεσποινίδη, κατάγομαι απο το Κιλκίς και είμαι φοιτητής στο Τμήμα Μηχανικών
-          Πληροφορικής και Ηλεκτρονικών Συστημάτων του Διεθνούς Πανεπιστημίου
-          της Ελλάδος.
+
+        <div id="right-side" class="side">
+            <nav>
+                <ul>
+                    <li><a class="link" href="./index.html">Home &nbsp&nbsp</a></li>
+                    <li><a class="link" href="./projects.html">&nbspProjects&nbsp&nbsp</a></li>
+                    <li><a class="link" href="./skills.html">&nbspSkills&nbsp&nbsp</a></li>
+                    <li><a class="link" href="./contact.html">&nbspContact</a></li>
+                </ul>
+            </nav>
+
+            <h2 class="title">I am a <span class="fancy">developer</span></h2>
+
+
         </div>
-        <div class="box">
-          <div class="container">
-            <h1>Web Development Εργαλεία</h1>
 
-            <div class="links">
-              <div class="col1">
-                <a
-                  href="https://responsively.app/"
-                  target="_blank"
-                  class="underline"
-                  >Responsively</a
-                ><br />
-                <a
-                  href="https://grid.layoutit.com/"
-                  target="_blank"
-                  class="underline"
-                  >Layoutit!</a
-                ><br />
-                <a
-                  href="https://fontawesome.com/icons"
-                  target="_blank"
-                  class="underline"
-                  >FontAwesome</a
-                >
-              </div>
-              <div class="col2">
-                <a
-                  href="https://unsplash.com/"
-                  target="_blank"
-                  class="underline"
-                  >Unsplash</a
-                ><br />
 
-                <a
-                  href="https://app.haikei.app/"
-                  target="_blank"
-                  class="underline"
-                  >Haikei</a
-                ><br />
+        <a href="./assets/Κωνσταντίνος_Δεσποινίδης_Resume.pdf" download><div class="cv">Download CV</div></a>
 
-                <a
-                  href="https://fonts.google.com/"
-                  target="_blank"
-                  class="underline"
-                  >Google Fonts</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="space-between"></div>
-          <div class="container">
-            <h1>IDE's</h1>
-
-            <div class="links">
-              <div class="col1">
-                <a
-                  href="https://code.visualstudio.com/"
-                  target="_blank"
-                  class="underline"
-                  >VS Code</a
-                ><br />
-
-                <a
-                  href="https://netbeans.apache.org/"
-                  target="_blank"
-                  class="underline"
-                  >NetBeans</a
-                ><br />
-
-                <a
-                  href="https://processing.org/"
-                  target="_blank"
-                  class="underline"
-                  >Processing</a
-                >
-              </div>
-              <div class="col2">
-                <a
-                  href="https://sourceforge.net/projects/orwelldevcpp/"
-                  target="_blank"
-                  class="underline"
-                  >DevC++</a
-                ><br />
-
-                <a
-                  href="https://www.arduino.cc/en/software"
-                  target="_blank"
-                  class="underline"
-                  >Arduino IDE</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="box link">
-          <a
-            href="https://www.iee.ihu.gr/"
-            class="item"
-            id="sxolh"
-            target="_blank"
-            ><div></div
-          ></a>
-          <div id="paragraph">
-            <h2>Η Σχολή μου</h2>
-            <p>
-              Το Τμήμα «Μηχανικών Πληροφορικής και Ηλεκτρονικών Συστημάτων» του
-              Διεθνούς Πανεπιστημίου της Ελλάδος (ΔΙ.ΠΑ.Ε) προήλθε από την
-              συνένωση των τμημάτων «Μηχανικών Πληροφορικής» και «Ηλεκτρονικών
-              Μηχανικών» την άνοιξη του 2019 και υποδέχεται πρωτοετείς φοιτητές
-              από το Σεπτέμβριο του 2019.
-            </p>
-          </div>
-        </div>
-      </div>
-      <footer>
-        <div class="pages">
-          <a href="projects.html" class="underline">Πρότζεκτ</a> |
-          <a href="favourites.html" class="underline">Αγαπημένα</a> |
-          <a href="about.html" class="underline">Σχετικά</a> |
-          <a href="contact.html" class="underline">Επικοινωνία</a>
-        </div>
-        <i>©2022 Konstantinos Despoinidis</i>
-      </footer>
     </main>
-  </body>
+</body>
+
 </html>

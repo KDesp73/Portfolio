@@ -1,0 +1,41 @@
+body {
+    background-image: url("../assets/bg-waves-pc.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+main{
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1.8fr;
+    gap: 0px 0px;
+}
+
+.title {
+    font-family: var(--fancy);
+    font-size: 4vw;
+    width: fit-content;
+}
+
+
+@media (min-width: 600px) and (max-width:800px) {
+    body {
+        background-image: url("../assets/bg-waves-tablet.png");
+    }
+
+    .title {
+        font-size: 7vw;
+    }
+}
+@media (max-width: 600px) {
+    body {
+        background-image: url("../assets/bg-waves-mobile.png");
+    }
+
+    .title {
+        font-size: 9vw;
+    }
+}

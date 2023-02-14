@@ -1,0 +1,14 @@
+@font-face{
+    font-family: "Pacifico";
+    src: url("../static/Pacifico-Regular.ttf")
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../static/Rubik-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Nothing-You-Could-Do";
+    src: url("../static/NothingYouCouldDo-Regular.ttf");
+}
