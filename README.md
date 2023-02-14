@@ -1,4 +1,5 @@
 # My-Portfolio
-My second attempt at constructing a complete website
 
-![portfolio](https://user-images.githubusercontent.com/63654361/215619447-08709fe5-f99f-4cc0-a462-4dfcbdc9e477.png)
+The 3rd iterration of my portfolio 
+
+![portfolio](https://user-images.githubusercontent.com/63654361/218864110-530942db-2966-4ce6-bfca-7f7a2db0b636.png)
