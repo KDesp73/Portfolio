@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="./css/pages.css">
     <link rel="stylesheet" href="./css/style.css">
 
-    <script src="./scripts/form.js" async></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <title>Contact</title>
 </head>
 
@@ -43,9 +42,8 @@
                     <div class="cut cut-large"></div>
                     <label for="email" class="placeholder">Message</label>
                 </div>
-                <button class="submit" id="submit" onclick="submitData()">
-                    Send
-                </button>
+                <input class="submit" id="submit" onclick="submitData()" value="Send">
+                    
             </form>
             <div class="icons-bar" id="icons-bar">
                 <a href="https://github.com/KDesp73" target="_blank" id="first">
@@ -59,8 +57,9 @@
                 </a>
             </div>
         </div>
-        </div>
-    </main>
+    </div>
+</main>
 </body>
+<script src="./scripts/form.js" async></script>
 
 </html>
