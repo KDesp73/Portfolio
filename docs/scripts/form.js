@@ -34,11 +34,13 @@ function sendEmail() {
                 console.log(info.email);
                 console.log(info.message);
                 console.log("Message sent");
+                window.alert("Message sent");
             },
             function (error) {
                 console.log("Issue not sent", error);
             }
         );
+
 }
 
 function checkInput() {
