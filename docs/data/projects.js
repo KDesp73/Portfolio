@@ -27,5 +27,11 @@ const projects = [
     title: "Ruby Web Server",
     link: "https://github.com/KDesp73/Ruby-Web-Server",
     img: "https://freesvg.org/img/web_server.png"
+  },
+
+  {
+    title: "C++ Chess",
+    link: "https://github.com/KDesp73/Chess",
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/ChessSet.jpg/250px-ChessSet.jpg"
   }
 ];
