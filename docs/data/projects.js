@@ -10,6 +10,16 @@ const projects = [
         img: ""
     },
     {
+        title: "PawrfectMatch",
+        link: "https://github.com/KDesp73/PawrefectMatch",
+        img: "https://private-user-images.githubusercontent.com/63654361/330217084-f2da0635-1b21-402a-bc6f-77d19e53bb69.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTY5MzQ2MDksIm5iZiI6MTcxNjkzNDMwOSwicGF0aCI6Ii82MzY1NDM2MS8zMzAyMTcwODQtZjJkYTA2MzUtMWIyMS00MDJhLWJjNmYtNzdkMTllNTNiYjY5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA1MjglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNTI4VDIyMTE0OVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTk2Njk1NmFmNzI1NTFmZGE4OGFkOThmYzRhMmVlYjA0YmZlMTI0M2ExMDMwYTJhYmRmNjI1MzJmMWI4MDM3OTgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.tp7beGLJPeDU6424R1xJituNgyy3DNRZqNDZPbPFbKk"
+    },
+    {
+        title: "kdscript",
+        link: "https://github.com/KDesp73/kdscript",
+        img: ""
+    },
+    {
         title: "project-starter.nvim",
         link: "https://github.com/KDesp73/project-starter.nvim",
         img: ""
