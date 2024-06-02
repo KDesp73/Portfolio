@@ -20,6 +20,11 @@ const projects = [
         img: ""
     },
     {
+        title: "Pong",
+        link: "https:/github.com/KDesp73/pong",
+        img: ""
+    },
+    {
         title: "project-starter.nvim",
         link: "https://github.com/KDesp73/project-starter.nvim",
         img: ""
