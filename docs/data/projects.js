@@ -7,7 +7,7 @@ const projects = [
     {
         title: "cchat",
         link: "https://github.com/KDesp73/cchat",
-        img: ""
+        img: "https://www.shutterstock.com/image-vector/talk-bubble-speech-icon-blank-600nw-1415472902.jpg"
     },
     {
         title: "PawrfectMatch",
@@ -22,7 +22,7 @@ const projects = [
     {
         title: "Pong",
         link: "https:/github.com/KDesp73/pong",
-        img: ""
+        img: "https://private-user-images.githubusercontent.com/63654361/335857312-1222e316-da74-45fa-81ad-d17e96ccc951.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTczOTg2MDgsIm5iZiI6MTcxNzM5ODMwOCwicGF0aCI6Ii82MzY1NDM2MS8zMzU4NTczMTItMTIyMmUzMTYtZGE3NC00NWZhLTgxYWQtZDE3ZTk2Y2NjOTUxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjAzVDA3MDUwOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWE2MTAyYjQyYjgzNDhkNDQwMGRiYTk1ZmQ4YjQ5NDk4YjJlYTNiZDhiYmM5MjhmOWY0MzJjODAxOGFmM2Y5MjUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.uquEXNoGLlPKAGKF_aORm0tA4n7xVA7k-RdpYUgYOUE"
     },
     {
         title: "project-starter.nvim",
