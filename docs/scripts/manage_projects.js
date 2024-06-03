@@ -10,7 +10,11 @@ function createProject(obj) {
     let project = document.createElement("div");
     let title = document.createElement("p");
 
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    console.log()
     project.classList.add("project");
+    project.style.backgroundColor = randomColor;
+
     title.innerHTML = obj.title;
     title.style.fontWeight = "bold";
     title.style.color = obj.fg;

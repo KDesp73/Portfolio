@@ -53,12 +53,12 @@ a {
 /* Tablet */
 @media (min-width: 600px) and (max-width:900px) {
     .project-container {
-        --width: calc(100vw / 5);
-        width: calc(var(--width) * 4);
+        --width: calc(11vw / 6);
+        width: var(--width);
     }
 
     .project {
-        width: var(--width);
+        width: 11vw;
     }
 
     .project > p {
@@ -69,12 +69,12 @@ a {
 /* Mobile */
 @media (max-width: 600px) {
     .project-container {
-        --width: calc(100vw / 3.6);
-        width: calc(var(--width) * 3);
+        --width: calc(12vw / 6);
+        width: var(--width);
     }
 
     .project {
-        width: var(--width);
+        width: 12vw;
     }
 
     .project > p {
