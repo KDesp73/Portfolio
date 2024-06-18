@@ -1,6 +1,6 @@
 CC = cc
 CFLAGS = -Wall -ggdb -Ilib/webc/include -Iinclude -DDEBUG
-LDFLAGS = -L$(PWD)/lib/webc -lwebc
+LDFLAGS = -Llib/webc -lwebc
 
 SRC_DIR = src
 INCLUDE_DIR = include

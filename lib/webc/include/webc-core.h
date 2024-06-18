@@ -32,8 +32,8 @@
 
 #define VERSION_MAJOR 0
 #define VERSION_MINOR 0
-#define VERSION_PATCH 3
-#define VERSION "0.0.3"
+#define VERSION_PATCH 4
+#define VERSION "0.0.4"
 
 #ifndef WEBCAPI
     #define WEBCAPI extern // Functions defined as 'extern' by default (implicit specifiers)
@@ -177,7 +177,10 @@ WEBCAPI void Append(char** buffer, Cstr text);
 WEBCAPI void Clean(char** buffer);
 
 /**
- * TODO
+ * Appends the file contents to the buffer
+ *
+ * @param buffer The buffer to append the contents
+ * @path The file path
  */
 WEBCAPI void IntegrateFile(char** buffer, Cstr path);
 
@@ -377,6 +380,7 @@ WEBCAPI void Ul(char** buffer, AttributeList attributes, BlockContents contents)
 WEBCAPI void Var(char** buffer, AttributeList attributes, Cstr text);
 WEBCAPI void Video(char** buffer, AttributeList attributes, BlockContents contents);
 WEBCAPI void Wbr(char** buffer, AttributeList attributes, Cstr text);
+
 /* 
 The following macros are used to append the html tags that don't require closing to the buffer
 */
