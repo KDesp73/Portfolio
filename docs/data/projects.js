@@ -1,5 +1,14 @@
 const projects = [
     {
+        title: "WebC",
+        link: "https://github.com/KDesp73/webc",
+        img: "",
+    },
+    {
+        title: "Platformer",
+        link: "https://github.com/KDesp73/platformer"
+    },
+    {
         title: "Kittify",
         link: "https://github.com/KDesp73/Kittify",
         img: "https://private-user-images.githubusercontent.com/63654361/284087278-b0475e94-21c7-4a58-b2f6-367684dd2cc8.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTczOTk0NzgsIm5iZiI6MTcxNzM5OTE3OCwicGF0aCI6Ii82MzY1NDM2MS8yODQwODcyNzgtYjA0NzVlOTQtMjFjNy00YTU4LWIyZjYtMzY3Njg0ZGQyY2M4LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjAzVDA3MTkzOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWQ5YTg2MGVjZjg2OGNlYjMyOThkOTBmYzZiMDc4ZDI1MWI3NWE2MzMzNTQyN2VmN2JiMjFkM2UyY2I2NzI1NzAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.v-8KGpU3ENwwZ7pxQyxQr-m5nLpy3VhVzwjcncTUQYE",
