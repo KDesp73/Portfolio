@@ -3,10 +3,13 @@ const projects = [
         title: "WebC",
         link: "https://github.com/KDesp73/webc",
         img: "",
+        fg: "white"
     },
     {
         title: "Platformer",
-        link: "https://github.com/KDesp73/platformer"
+        link: "https://github.com/KDesp73/platformer",
+        img: "",
+        fg: "white"
     },
     {
         title: "Kittify",
