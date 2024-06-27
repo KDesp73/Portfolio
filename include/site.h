@@ -11,12 +11,22 @@ typedef struct {
     Cstr target;
 } Link;
 
+typedef struct {
+    Cstr title;
+    Cstr link;
+    Cstr lang;
+    Cstr license;
+    Cstr desc;
+} Project;
 
 void SidebarLinks(char** buffer);
 void SidebarFooter(char** buffer);
 void SideBar(char** buffer);
 
 void Intro(char** buffer, Cstr name, Cstr about);
+void Projects(char** buffer);
+void Skills(char** buffer);
+void Contact(char** buffer);
 void Content(char** buffer);
 
 

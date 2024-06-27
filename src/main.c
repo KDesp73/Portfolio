@@ -6,17 +6,6 @@
 #include "webc-actions.h"
 #include "site.h"
 
-void AutoRefresh(char** buffer)
-{
-    Cstr code = 
-"function refreshPage() {"
-  "window.location.reload();"
-"}\n\n"
-"setInterval(refreshPage, 10000);";
-    WEBC_Javascript(buffer, code);
-}
-
-
 char* SinglePageTemplate(Cstr title, Cstr author, Cstr style)
 {
     char* buffer = NULL;
@@ -33,7 +22,9 @@ char* SinglePageTemplate(Cstr title, Cstr author, Cstr style)
             NULL
         );
 
-        WEBC_Script(&buffer, NO_ATTRIBUTES, AutoRefresh);
+        WEBC_ScriptStart(&buffer);
+            WEBC_IntegrateFile(&buffer, "./script.js");
+        WEBC_ScriptEnd(&buffer);
 
         WEBC_StyleStart(&buffer);
             WEBC_IntegrateFile(&buffer, style);
@@ -60,7 +51,7 @@ int main(int argc, char** argv)
 
     Cstr root = "site";
     Tree tree = WEBC_MakeTree(root,
-        WEBC_MakeRoute("/", SinglePageTemplate("Portfolio", AUTHOR, "./style/style.css")),
+        WEBC_MakeRoute("/", SinglePageTemplate("Portfolio", AUTHOR, "./style.css")),
         NULL
     );
 
