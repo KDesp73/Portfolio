@@ -103,7 +103,7 @@ int main(int argc, char** argv)
 
     Cstr root = "docs";
     Tree tree = WEBC_MakeTree(root,
-        WEBC_MakeRoute("/", SinglePagePortfolioTemplate(portfolio)),
+        WEBC_MakeRoute("/", WEBC_SinglePagePortfolioTemplate(portfolio)),
         NULL
     );
 
