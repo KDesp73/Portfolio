@@ -38,6 +38,20 @@ int main(int argc, char** argv)
             .desc = "A modern, api-equipped music player for any PC"
         },
         (Project) {
+            .title = "PawrfectMatch",
+            .link = "https://github.com/KDesp73/PawrfectMatch",
+            .lang = "Kotlin",
+            .license = "MIT",
+            .desc = "An android app to help you find your furry friend and more! "
+        },
+        (Project) {
+            .title = "cchat",
+            .link = "https://github.com/KDesp73/cchat",
+            .lang = "C",
+            .license = "GPL-3.0",
+            .desc = "A simple chat service for the terminal written in C"
+        },
+        (Project) {
             .title = "DataBridge",
             .link = "https://github.com/KDesp73/DataBridge",
             .lang = "Java",
