@@ -127,26 +127,23 @@ void Skills(char** buffer)
 
 }
 
+void WayOfContact(char** buffer, Cstr label, Cstr title, Cstr link)
+{
+    char* anchor = (char*) malloc(1);
+    memset(anchor,0,1);
+    WEBC_Anchor(&anchor, WEBC_UseModifier((Modifier) {.href = link}), title);
+    char* paragraph = clib_format_text("%s: %s", label, anchor);
+    free(anchor);
+    WEBC_Paragraph(buffer, NO_ATTRIBUTES, paragraph);
+    free(paragraph);
+}
+
 void Contact(char** buffer)
 {
     Section(buffer, "contact");
 
-    char* email_anchor = (char*) malloc(1);
-    memset(email_anchor,0,1);
-    WEBC_Anchor(&email_anchor, WEBC_UseModifier((Modifier) {.href = "mailto:despoinidisk@gmail.com"}), "despoinidisk@gmail.com");
-    char* email_paragraph = clib_format_text("Email: %s", email_anchor);
-    free(email_anchor);
-    WEBC_Paragraph(buffer, NO_ATTRIBUTES, email_paragraph);
-    free(email_paragraph);
-    
-    char* github_anchor = (char*) malloc(1);
-    memset(github_anchor,0,1);
-    WEBC_Anchor(&github_anchor, WEBC_UseModifier((Modifier) {.href = "https://github.com/KDesp73"}), "@KDesp73");
-    char* github_paragraph = clib_format_text("Github: %s", github_anchor);
-    free(github_anchor);
-    WEBC_Paragraph(buffer, NO_ATTRIBUTES, github_paragraph);
-    free(github_paragraph);
-
+    WayOfContact(buffer, "Email", "despoinidisk@gmail.com", "mailto:despoinidisk@gmail.com");
+    WayOfContact(buffer, "Github", "@KDesp73", "https://github.com/KDesp73");
 }
 
 void Seperator(char** buffer)
