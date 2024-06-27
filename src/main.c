@@ -45,7 +45,7 @@ int main(int argc, char** argv)
 {
     WebcAction action = WEBC_ParseCliArgs(argc, argv);
 
-    Cstr root = "site";
+    Cstr root = "docs";
     Tree tree = WEBC_MakeTree(root,
         WEBC_MakeRoute("/", SinglePageTemplate("Portfolio", AUTHOR, "./style.css")),
         NULL
