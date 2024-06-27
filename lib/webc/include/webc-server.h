@@ -37,15 +37,24 @@
 #include "extern/httpd.h"
 
 /**
- * Serves a physical file tree starting from the root
+ * Serves the physical file tree exported from this program starting from the root
  *
  * @param port The port to start the server from
- * @param root The root directory
+ * @param tree The virtual tree
  *
  * @return int Success code
  */
-WEBCAPI int ServeExported(int port, Tree tree);
-WEBCAPI int ServeExportedRoot(int port, Cstr root);
+WEBCAPI int WEBC_ServeExported(int port, Tree tree);
+
+/**
+ * Serves a physical file tree starting from the root
+ *
+ * @param port The port to start the server from
+ * @param root The root directory to start serving from
+ *
+ * @return int Success code
+ */
+WEBCAPI int WEBC_ServeExportedRoot(int port, Cstr root);
 
 /**
  * Serves a the virtual tree created by the user without exporting it
@@ -55,7 +64,7 @@ WEBCAPI int ServeExportedRoot(int port, Cstr root);
  *
  * @return int Success code
  */
-WEBCAPI int ServeTree(int port, Tree tree);
+WEBCAPI int WEBC_ServeTree(int port, Tree tree);
 
 // HTTPD Extensions
 int request_response_tree(int sock, const struct request_t* req, Tree tree);

@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="Konstantinos Despoinidis">
-
-<title>Portfolio</title>
-</head>
-<script>
-function refreshPage() {window.location.reload();}
-
-setInterval(refreshPage, 10000);
-</script>
-<style>
 /* General Styles */
 :root {
     --sidebar-width: 30%;
@@ -94,31 +79,3 @@ main p {
     height: auto;
 }
 
-
-</style>
-<body>
-<div class="sidebar">
-<h2>KDesp73</h2>
-<ul>
-<a href="#intro"><li>Intro</li>
-</a>
-<a href="#projects"><li>Projects</li>
-</a>
-<a href="#skills"><li>Skills</li>
-</a>
-<a href="#contact"><li>Contact</li>
-</a>
-<a href="https://github.com/KDesp73/webc" target="_blank"><li>Source Code</li>
-</a>
-</ul>
-<footer>
-<p>Made with <a href="https://github.com/KDesp73/webc" target="_blank">webc</a></p>
-<p>Copyright (c) Konstantinos Despoinidis 2024</p>
-</footer>
-</div>
-<main>
-<h1>Intro</h1>
-<p>Hello there! My name is Konstantinos Despoinidis<br><br>I am a Software and Electronics Engineering Student located at Thessaloniki, Greece</p>
-</main>
-</body>
-</html>

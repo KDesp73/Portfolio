@@ -4,211 +4,67 @@
 
 #include "webc-core.h"
 #include "webc-actions.h"
+#include "site.h"
 
-void address_content(char** buffer)
+void AutoRefresh(char** buffer)
 {
-    PlainText(buffer, "Written by ");
-    Anchor(buffer, MakeAttributeList(MakeAttribute(ATTR_HREF, "KDesp73"), MakeAttribute(ATTR_TARGET, "_blank"), NULL), "KDesp73");
-    Br(buffer);
-    PlainText(buffer, "Source code at: ");
-    Anchor(buffer, MakeAttributeList(MakeAttribute(ATTR_HREF, "KDesp73/webc"), MakeAttribute(ATTR_TARGET, "_blank"), NULL), "webc");
+    Cstr code = 
+"function refreshPage() {"
+  "window.location.reload();"
+"}\n\n"
+"setInterval(refreshPage, 10000);";
+    WEBC_Javascript(buffer, code);
 }
 
-void text_demo(char** buffer){
-    for (size_t i = 1; i <= 6; ++i) {
-        Heading(buffer, NO_ATTRIBUTES, i, clib_format_text("Heading %zu", i));
-    }
-    Paragraph(buffer, NO_ATTRIBUTES, "Hello from C");
-}
 
-void list_fruits(char** buffer)
-{
-    CstrArray fruits = clib_cstr_array_make(
-        "apple", "banana", "cherry", "watermelon", "pear", NULL
-    );
-    CstrArray colors = clib_cstr_array_make(
-        "red", "yellow", "red", "green", "lightgreen", NULL
-    );
-
-    for(size_t i = 0; i < fruits.count; ++i){
-        Li(buffer, 
-            MakeAttributeList(
-                MakeAttribute(ATTR_STYLE, clib_format_text("color: %s;", colors.items[i])), 
-                MakeAttribute(ATTR_CLASS, "item"), 
-                NULL
-            ), 
-            fruits.items[i]
-        );
-    }
-}
-
-char* Index()
+char* SinglePageTemplate(Cstr title, Cstr author, Cstr style)
 {
     char* buffer = NULL;
 
-    HtmlStart(&buffer, "en");
-    Head(&buffer, "WebC Example",
-        MakeTag(META,
-            MakeAttributeList(
-                MakeAttribute(ATTR_NAME, "author"),
-                MakeAttribute(ATTR_CONTENT, "Konstantinos Despoinidis"),
-                NULL
-            )
-        ),
-        MakeTag(BASE, 
-            MakeAttributeList(
-                MakeAttribute(ATTR_HREF, "https://www.github.com"),
-                MakeAttribute(ATTR_TARGET, "_blank"),
-                NULL
-            )
-        ),
-        NULL
-    );
-
-    ScriptStart(&buffer);
-        Javascript(&buffer, "INFO = (str) => { console.log('[INFO] ' + str); }");
-        Javascript(&buffer, "INFO('Website made by KDesp73')");
-        Javascript(&buffer, "INFO('Using webc')");
-    ScriptEnd(&buffer);
-
-
-    BodyStart(&buffer);
-        Div(
-            &buffer,
-            MakeAttributeList(MakeAttribute(ATTR_STYLE, "background-color: grey;"), NULL),
-            text_demo
+    WEBC_HtmlStart(&buffer, "en");
+        WEBC_Head(&buffer, title,
+            WEBC_MakeTag(META, 
+                WEBC_MakeAttributeList(
+                    WEBC_MakeAttribute(ATTR_NAME, "author"),
+                    WEBC_MakeAttribute(ATTR_CONTENT, author),
+                    NULL
+                )
+            ),
+            NULL
         );
 
-        Input(&buffer, MakeAttributeList(MakeAttribute(ATTR_STYLE, "color: red;"), NULL));
-        Br(&buffer);
-        Hr(&buffer);
-        Abbr(&buffer, MakeAttributeList(MakeAttribute(ATTR_TITLE, "World Health Organization"), NULL), "WHO");
+        WEBC_Script(&buffer, NO_ATTRIBUTES, AutoRefresh);
 
-        Address(&buffer, NO_ATTRIBUTES, address_content);
+        WEBC_StyleStart(&buffer);
+            WEBC_IntegrateFile(&buffer, style);
+        WEBC_StyleEnd(&buffer);
 
-        Modifier image_modifier = {
-            .src = "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
-            .alt = "chameleon",
-            .width = 500,
-            .height = 300,
-        };
+        WEBC_BodyStart(&buffer);
+            Modifier sidebar_modifier = {
+                .class = "sidebar",
+            };
+            WEBC_Div(&buffer, WEBC_UseModifier(sidebar_modifier), SideBar);
 
-        Img(&buffer, UseModifier(image_modifier));
+            WEBC_Main(&buffer, NO_ATTRIBUTES, Content);
 
-        Ul(&buffer, MakeAttributeList(MakeAttribute(ATTR_STYLE, "background-color: #181818;"), NULL), list_fruits);
-        text_demo(&buffer);
+        WEBC_BodyEnd(&buffer);
 
-    BodyEnd(&buffer);
-    HtmlEnd(&buffer);
-
-    return buffer;
-}
-
-char* About()
-{
-    char* buffer = NULL;
-    HtmlStart(&buffer, "en");
-    Head(&buffer, "About",
-        MakeTag(META, 
-            MakeAttributeList(
-                MakeAttribute(ATTR_NAME, "author"),
-                MakeAttribute(ATTR_CONTENT, "Konstantinos Despoinidis"),
-                NULL
-            )
-        ),
-        MakeTag(BASE, 
-            MakeAttributeList(
-                MakeAttribute(ATTR_HREF, "https://www.github.com"),
-                MakeAttribute(ATTR_TARGET, "_blank"),
-                NULL
-            )
-        ),
-        NULL
-    );
-
-    BodyStart(&buffer);
-        Heading(&buffer, NO_ATTRIBUTES, 1, "About");
-        Anchor(&buffer, MakeAttributeList(MakeAttribute(ATTR_HREF, "KDesp73"), NULL), "Github");
-        Paragraph(&buffer, MakeAttributeList(MakeAttribute(ATTR_STYLE, "color: red;"), NULL), "Test");
-    BodyEnd(&buffer);
-    HtmlEnd(&buffer);
-
-    return buffer;
-}
-
-void form(char** buffer)
-{
-    Input(buffer, MakeAttributeList(
-        MakeAttribute(ATTR_TYPE, "text"),
-        MakeAttribute(ATTR_NAME, "greeting"),
-        MakeAttribute(ATTR_VALUE, "Hello"),
-        NULL
-    ));
-    Input(buffer, MakeAttributeList(
-        MakeAttribute(ATTR_TYPE, "text"),
-        MakeAttribute(ATTR_NAME, "name"),
-        MakeAttribute(ATTR_VALUE, "World"),
-        NULL
-    ));
-    Input(buffer, MakeAttributeList(
-        MakeAttribute(ATTR_TYPE, "submit"),
-        NULL
-    ));
-}
-
-char* Forms()
-{
-    char* buffer = NULL;
-    HtmlStart(&buffer, "en");
-    Head(&buffer, "Forms",
-        MakeTag(META, 
-            MakeAttributeList(
-                MakeAttribute(ATTR_NAME, "author"),
-                MakeAttribute(ATTR_CONTENT, "Konstantinos Despoinidis"),
-                NULL
-            )
-        ),
-        NULL
-    );
-
-    BodyStart(&buffer);
-        Heading(&buffer, NO_ATTRIBUTES, 1, "Contact");
-
-        Modifier form_modifier = {
-            .method = "get",
-            .action = "index.html"
-        };
-
-        H2(&buffer, NO_ATTRIBUTES, "GET form");
-        Form(&buffer, UseModifier(form_modifier), form);
-
-        Br(&buffer);
-        Br(&buffer);
-        Br(&buffer);
-
-        form_modifier.method = "post";
-        H2(&buffer, NO_ATTRIBUTES, "POST form");
-        Form(&buffer, UseModifier(form_modifier), form);
-
-    BodyEnd(&buffer);
-    HtmlEnd(&buffer);
+    WEBC_HtmlEnd(&buffer);
 
     return buffer;
 }
 
 int main(int argc, char** argv)
 {
-    WebcAction action = ParseCliArgs(argc, argv);
+    WebcAction action = WEBC_ParseCliArgs(argc, argv);
 
     Cstr root = "site";
-    Tree tree = MakeTree(root,
-        MakeRoute("/", Index()),
-        MakeRoute("/about", About()),
-        MakeRoute("/forms", Forms()),
+    Tree tree = WEBC_MakeTree(root,
+        WEBC_MakeRoute("/", SinglePageTemplate("Portfolio", AUTHOR, "./style/style.css")),
         NULL
     );
 
-    HandleAction(action, tree);
+    WEBC_HandleAction(action, tree);
 
     return 0;
 }

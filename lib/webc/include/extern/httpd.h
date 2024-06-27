@@ -12,7 +12,9 @@
     #define HTTPDAPI static
 #endif // HTTPDAPI
 
+#ifdef __GNUC__
 #pragma GCC diagnostic ignored "-Wunused-function"
+#endif
 
 /* ########## Includes ########## */
 
@@ -553,7 +555,7 @@ HTTPDAPI int request_response(int sock, const struct request_t * req, const char
 	int length = 0;
 
 	UNUSED(req);
-    Cstr file = CONCAT(root, req->url);
+    Cstr file = clib_format_text("%s%s", root, req->url);
 
     if(!clib_file_exists(file)){
         length = strlen(NOT_FOUND_RESPONSE);
@@ -562,13 +564,22 @@ HTTPDAPI int request_response(int sock, const struct request_t * req, const char
     
 	if (is_index_html_needed(req->url)){
         size_t url_len = strlen(req->url);
+        char* path = NULL;
         if(req->url[url_len] == '/'){
-            return request_send_file(sock, req, CONCAT(file, "index.html"));
+            path = clib_format_text("%s%s", file, "index.html");
+            return request_send_file(sock, req, path);
         } else {
-            return request_send_file(sock, req, CONCAT(file, "/", "index.html"));
+            path = clib_format_text("%s/%s", file, "index.html");
+            return request_send_file(sock, req, path);
         }
     }
-    return request_send_file(sock, req, CONCAT(root, req->url));
+
+    char* url = clib_format_text("%s%s", root, req->url);
+    int code = request_send_file(sock, req, url);
+
+    free(file);
+    free(url);
+    return code;
 }
 
 #endif // HTTPD_IMPLEMENTATION

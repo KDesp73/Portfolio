@@ -1,6 +1,16 @@
-CC = cc
+CC = gcc
+
+
+SANITIZERS = 
 CFLAGS = -Wall -ggdb -Ilib/webc/include -Iinclude -DDEBUG
 LDFLAGS = -Llib/webc -lwebc
+
+ifdef SANITIZE
+	SANITIZERS = -fsanitize=address,undefined
+endif
+
+CFLAGS += $(SANITIZERS)
+LDFLAGS += $(SANITIZERS)
 
 SRC_DIR = src
 INCLUDE_DIR = include
@@ -17,7 +27,7 @@ TARGET = webc-site
 
 # Default target, build the executable
 all: $(BUILD_DIR) $(TARGET)
-	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/lib/webc
+	export LD_LIBRARY_PATH=$(LD_LIBRARY_PATH):$(pwd)/lib/webc
 
 # Rule to create the build directory
 $(BUILD_DIR):
