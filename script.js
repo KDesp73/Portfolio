@@ -1,3 +1,4 @@
+/* For development */
 function refreshPage() {
     window.location.reload();
 }

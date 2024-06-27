@@ -22,10 +22,6 @@ char* SinglePageTemplate(Cstr title, Cstr author, Cstr style)
             NULL
         );
 
-        WEBC_ScriptStart(&buffer);
-            WEBC_IntegrateFile(&buffer, "./script.js");
-        WEBC_ScriptEnd(&buffer);
-
         WEBC_StyleStart(&buffer);
             WEBC_IntegrateFile(&buffer, style);
         WEBC_StyleEnd(&buffer);

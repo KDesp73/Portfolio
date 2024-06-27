@@ -7,52 +7,6 @@
 
 <title>Portfolio</title>
 </head>
-<script>
-
-function refreshPage() {
-    window.location.reload();
-}
-setInterval(refreshPage, 10000);
-
-function smoothScroll(target, duration = 500) {
-    const targetElement = document.querySelector(target);
-    const targetPosition = targetElement.getBoundingClientRect().top;
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    let startTime = null;
-
-    function animation(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) {
-            requestAnimationFrame(animation);
-        } else {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-
-    function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return (c / 2) * t * t + b;
-        t--;
-        return (-c / 2) * (t * (t - 2) - 1) + b;
-    }
-
-    requestAnimationFrame(animation);
-}
-
-// Add smooth scrolling behavior
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = this.getAttribute('href');
-        smoothScroll(target);
-    });
-});
-
-</script>
 <style>
 /* General Styles */
 :root {
