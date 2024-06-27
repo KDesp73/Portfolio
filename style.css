@@ -67,6 +67,7 @@ body {
 main {
     margin-left: calc(var(--sidebar-width) + 20px);
     padding: 40px 20px 20px 20px;
+    overflow-x: hidden;
 }
 
 main h1 {
@@ -99,12 +100,22 @@ main p {
     color: var(--accent-color);
 }
 
+.skills {
+    max-width: 80%;
+    display: flex;
+    flex-flow: wrap;
+    margin-bottom: 1em;
+}
+
 @media (min-width: 768px) {
     .sidebar {
         width: var(--sidebar-width-medium);
     }
     main {
         margin-left: calc(var(--sidebar-width-medium) + 20px);
+    }
+    .skills {
+        max-width: calc(100vw - var(--sidebar-width-medium));
     }
 }
 
@@ -114,5 +125,8 @@ main p {
     }
     main {
         margin-left: calc(var(--sidebar-width-large) + 30px);
+    }
+    .skills {
+        max-width: calc(100vw - var(--sidebar-width-large));
     }
 }

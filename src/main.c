@@ -2,52 +2,108 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "webc-core.h"
 #include "webc-actions.h"
-#include "site.h"
-
-char* SinglePageTemplate(Cstr title, Cstr author, Cstr style)
-{
-    char* buffer = NULL;
-
-    WEBC_HtmlStart(&buffer, "en");
-        WEBC_Head(&buffer, title,
-            WEBC_MakeTag(META, 
-                WEBC_MakeAttributeList(
-                    WEBC_MakeAttribute(ATTR_NAME, "author"),
-                    WEBC_MakeAttribute(ATTR_CONTENT, author),
-                    NULL
-                )
-            ),
-            NULL
-        );
-
-        WEBC_StyleStart(&buffer);
-            WEBC_IntegrateFile(&buffer, style);
-        WEBC_StyleEnd(&buffer);
-
-        WEBC_BodyStart(&buffer);
-            Modifier sidebar_modifier = {
-                .class = "sidebar",
-            };
-            WEBC_Div(&buffer, WEBC_UseModifier(sidebar_modifier), SideBar);
-
-            WEBC_Main(&buffer, NO_ATTRIBUTES, Content);
-
-        WEBC_BodyEnd(&buffer);
-
-    WEBC_HtmlEnd(&buffer);
-
-    return buffer;
-}
+#include "webc-templates/spp.h"
 
 int main(int argc, char** argv)
 {
     WebcAction action = WEBC_ParseCliArgs(argc, argv);
+    Project projects[] = {
+        (Project) {
+            .title = "webc",
+            .link = "https://github.com/KDesp73/webc",
+            .lang = "C",
+            .license = "MIT",
+            .desc = "A library that allows you to write websites (like this one!) using C"
+        },
+        (Project) {
+            .title = "kdscript",
+            .link = "https://github.com/KDesp73/kdscript",
+            .lang = "Python",
+            .license = "MIT",
+            .desc = "My very own interpreted programming language"
+        },
+        (Project) {
+            .title = "Chess",
+            .link = "https://github.com/KDesp73/Chess",
+            .lang = "C++",
+            .license = "MIT",
+            .desc = "Two player chess with a tui and a gui implementation"
+        },
+        (Project) {
+            .title = "Kittify",
+            .link = "https://github.com/KDesp73/Kittify",
+            .lang = "Java",
+            .license = "MIT",
+            .desc = "A modern, api-equipped music player for any PC"
+        },
+        (Project) {
+            .title = "DataBridge",
+            .link = "https://github.com/KDesp73/DataBridge",
+            .lang = "Java",
+            .license = "MIT",
+            .desc = "An easy-to-use and fully extendable Java to DBMS connector library"
+        },
+        (Project) {
+            .title = "project-starter.nvim",
+            .link = "https://github.com/KDesp73/project-starter.nvim",
+            .lang = "Lua",
+            .license = "The Unlicense",
+            .desc = "A neovim plugin to help you quickstart you development by creating the project structure"
+        },
+        (Project) {
+            .title = "platformer",
+            .link = "https://github.com/KDesp73/platformer",
+            .lang = "C",
+            .license = "MIT",
+            .desc = "A platformer written in C using the raylib library, featuring a level builder"
+        },
+    };
+
+    Cstr skills[] = {
+        "c",
+        "cpp",
+        "java",
+        "py",
+        "ruby",
+        "rails",
+        "html",
+        "css",
+        "js",
+        "electron",
+        "arduino",
+        "git",
+        "linux",
+        "processing",
+        "wordpress",
+        "neovim",
+        "cmake",
+        "svelte",
+        "lua",
+        "sqlite",
+        "kotlin",
+        "androidstudio",
+        "firebase"
+    };
+    
+    
+    SinglePagePortfolio portfolio = {
+        .title = "Portfolio",
+        .author = "Konstantinos Despoinidis",
+        .email = "despoinidisk@gmail.com",
+        .year = 2024,
+        .github_username = "KDesp73",
+        .about =  "I am a Software and Electronics Engineering Student located at Thessaloniki, Greece",
+        .style_path = "./style.css",
+        .projects = projects,
+        .projects_count = ARRAY_LEN(projects),
+        .skills = skills,
+        .skills_count = ARRAY_LEN(skills)
+    };
 
     Cstr root = "docs";
     Tree tree = WEBC_MakeTree(root,
-        WEBC_MakeRoute("/", SinglePageTemplate("Portfolio", AUTHOR, "./style.css")),
+        WEBC_MakeRoute("/", SinglePagePortfolioTemplate(portfolio)),
         NULL
     );
 

@@ -77,6 +77,7 @@ body {
 main {
     margin-left: calc(var(--sidebar-width) + 20px);
     padding: 40px 20px 20px 20px;
+    overflow-x: hidden;
 }
 
 main h1 {
@@ -109,12 +110,22 @@ main p {
     color: var(--accent-color);
 }
 
+.skills {
+    max-width: 80%;
+    display: flex;
+    flex-flow: wrap;
+    margin-bottom: 1em;
+}
+
 @media (min-width: 768px) {
     .sidebar {
         width: var(--sidebar-width-medium);
     }
     main {
         margin-left: calc(var(--sidebar-width-medium) + 20px);
+    }
+    .skills {
+        max-width: calc(100vw - var(--sidebar-width-medium));
     }
 }
 
@@ -124,6 +135,9 @@ main p {
     }
     main {
         margin-left: calc(var(--sidebar-width-large) + 30px);
+    }
+    .skills {
+        max-width: calc(100vw - var(--sidebar-width-large));
     }
 }
 
@@ -209,9 +223,10 @@ main p {
 <h1 id="skills">Skills</h1>
 <br>
 <p>I am familiar with the following technologies</p>
-<img src="https://skillicons.dev/icons?i=c,cpp,java,py,ruby,rails,html,css,js">
-<img src="https://skillicons.dev/icons?i=electron,arduino,git,linux,processing,wordpress,neovim,cmake,svelte">
-<img src="https://skillicons.dev/icons?i=lua,sqlite,kotlin,androidstudio,firebase">
+<img class="skills" src="https://skillicons.dev/icons?i=c,cpp,java,py,ruby,rails">
+<img class="skills" src="https://skillicons.dev/icons?i=html,css,js,electron,arduino,git,">
+<img class="skills" src="https://skillicons.dev/icons?i=linux,processing,wordpress,neovim,cmake,svelte,">
+<img class="skills" src="https://skillicons.dev/icons?i=lua,sqlite,kotlin,androidstudio,firebase,(null),">
 <br>
 <br>
 <hr>
