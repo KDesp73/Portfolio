@@ -7,7 +7,7 @@ void SidebarLinks(char** buffer)
         (Link){.text = "Projects",.link = "#projects", .target = NULL},
         (Link){.text = "Skills",.link = "#skills", .target = NULL},
         (Link){.text = "Contact",.link = "#contact", .target = NULL},
-        (Link){.text = "Source Code",.link = "https://github.com/KDesp73/webc", .target = "_blank"}
+        (Link){.text = "Source Code",.link = "https://github.com/KDesp73/webc-portfolio", .target = "_blank"}
     };
 
     for (size_t i = 0; i < ARRAY_LEN(links); ++i) {
